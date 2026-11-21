@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /_content/
+Disallow: /node_modules/
+Disallow: /admin.html
+
+Sitemap: https://sabiasquepr.com/sitemap.xml

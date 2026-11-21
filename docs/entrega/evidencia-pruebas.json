@@ -1,0 +1,4322 @@
+{
+  "generado": "2026-11-21T22:33:55.834Z",
+  "comando": "cd backend && npx jest --json --outputFile=<tmp> --coverage --coverageReporters=json-summary",
+  "node": "v24.13.0",
+  "suites_total": 68,
+  "suites_pasadas": 68,
+  "suites_falladas": 0,
+  "pruebas_total": 888,
+  "pruebas_pasadas": 888,
+  "pruebas_falladas": 0,
+  "pruebas_omitidas": 0,
+  "exito": true,
+  "duracion_seg": 19.2,
+  "cobertura_global": {
+    "lineas": 91.81,
+    "sentencias": 89.87,
+    "funciones": 91.62,
+    "ramas": 86.06,
+    "lineas_cubiertas": 1436,
+    "lineas_total": 1564
+  },
+  "cobertura_por_carpeta": [
+    {
+      "carpeta": "src",
+      "archivos": 3,
+      "lineas": 95.2,
+      "sentencias": 95.3,
+      "funciones": 72.7,
+      "ramas": 90.9
+    },
+    {
+      "carpeta": "src/lib",
+      "archivos": 1,
+      "lineas": 100,
+      "sentencias": 100,
+      "funciones": 100,
+      "ramas": 100
+    },
+    {
+      "carpeta": "src/middleware",
+      "archivos": 1,
+      "lineas": 94.8,
+      "sentencias": 88.1,
+      "funciones": 100,
+      "ramas": 84
+    },
+    {
+      "carpeta": "src/routes",
+      "archivos": 14,
+      "lineas": 92.2,
+      "sentencias": 91.3,
+      "funciones": 97.3,
+      "ramas": 90.3
+    },
+    {
+      "carpeta": "src/services",
+      "archivos": 7,
+      "lineas": 74,
+      "sentencias": 70.6,
+      "funciones": 75.5,
+      "ramas": 58.9
+    },
+    {
+      "carpeta": "src/test-utils",
+      "archivos": 1,
+      "lineas": 89.5,
+      "sentencias": 90.9,
+      "funciones": 100,
+      "ramas": 100
+    },
+    {
+      "carpeta": "src/util",
+      "archivos": 11,
+      "lineas": 97.6,
+      "sentencias": 94.9,
+      "funciones": 100,
+      "ramas": 85
+    },
+    {
+      "carpeta": "src/validators",
+      "archivos": 13,
+      "lineas": 98.6,
+      "sentencias": 96.5,
+      "funciones": 100,
+      "ramas": 95.6
+    }
+  ],
+  "suites": [
+    {
+      "archivo": "scripts/lib/delta.test.js",
+      "estado": "passed",
+      "pruebas": 7,
+      "pasadas": 7,
+      "falladas": 0,
+      "duracion_ms": 260,
+      "nombres": [
+        {
+          "titulo": "calcularDelta detecta faltantes, extras y modificadas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "calcularDelta copias idénticas: no hay nada que sincronizar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "calcularDelta nuevo vacío: todo el viejo falta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "calcularDelta no modifica los mapas recibidos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "enTandas divide en grupos del tamaño pedido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "ORDEN_TABLAS_PUBLIC los padres van antes que los hijos (perfiles antes de órdenes y foro; posts antes de comentarios)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "ORDEN_TABLAS_PUBLIC no repite tablas",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "scripts/lib/env-ensayo.test.js",
+      "estado": "passed",
+      "pruebas": 4,
+      "pasadas": 4,
+      "falladas": 0,
+      "duracion_ms": 269,
+      "nombres": [
+        {
+          "titulo": "env-ensayo cambia solo DATABASE_URL, SUPABASE_URL y FRONTEND_ORIGIN y conserva lo demas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "env-ensayo agrega las variables que no existian",
+          "estado": "passed"
+        },
+        {
+          "titulo": "env-ensayo un valor con $ o & no se interpreta como patron de reemplazo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "env-ensayo armarDatabaseUrl codifica la contrasena y usa el usuario postgres.<ref>",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "scripts/lib/filtrar-toc.test.js",
+      "estado": "passed",
+      "pruebas": 5,
+      "pasadas": 5,
+      "falladas": 0,
+      "duracion_ms": 243,
+      "nombres": [
+        {
+          "titulo": "filtrarToc (restauracion en proyecto nuevo) conserva lo de public (tablas, datos, restricciones, FK, RLS)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "filtrarToc (restauracion en proyecto nuevo) conserva solo los DATOS de auth.users y auth.identities",
+          "estado": "passed"
+        },
+        {
+          "titulo": "filtrarToc (restauracion en proyecto nuevo) descarta esquemas gestionados, extensiones, event triggers y rls_auto_enable",
+          "estado": "passed"
+        },
+        {
+          "titulo": "filtrarToc (restauracion en proyecto nuevo) ignora comentarios y lineas vacias, y cuenta las excluidas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "filtrarToc (restauracion en proyecto nuevo) los datos de auth.users van ANTES que los de auth.identities (llave foranea)",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/app.express5.test.js",
+      "estado": "passed",
+      "pruebas": 9,
+      "pasadas": 9,
+      "falladas": 0,
+      "duracion_ms": 1526,
+      "nombres": [
+        {
+          "titulo": "peticiones sin cuerpo (Express 5: req.body undefined) POST /api/comentarios sin cuerpo responde 400 de validacion, no 500",
+          "estado": "passed"
+        },
+        {
+          "titulo": "peticiones sin cuerpo (Express 5: req.body undefined) POST /api/foro/posts sin cuerpo responde 400 de validacion, no 500",
+          "estado": "passed"
+        },
+        {
+          "titulo": "peticiones sin cuerpo (Express 5: req.body undefined) POST /api/reportes sin cuerpo responde 400 de validacion, no 500",
+          "estado": "passed"
+        },
+        {
+          "titulo": "peticiones sin cuerpo (Express 5: req.body undefined) POST /api/contenidos sin cuerpo responde 400 de validacion, no 500",
+          "estado": "passed"
+        },
+        {
+          "titulo": "peticiones sin cuerpo (Express 5: req.body undefined) POST /api/productos sin cuerpo responde 400 de validacion, no 500",
+          "estado": "passed"
+        },
+        {
+          "titulo": "peticiones sin cuerpo (Express 5: req.body undefined) PUT /api/perfil sin cuerpo es una actualizacion valida sin cambios (200, no TypeError)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "peticiones sin cuerpo (Express 5: req.body undefined) cuerpo con Content-Type equivocado tambien llega como {} y valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "rutas con parametros siguen resolviendo igual GET /api/contenidos/:id inexistente -> 404 (no 500)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "rutas con parametros siguen resolviendo igual una ruta que no existe -> 404 de Express (no se cae)",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/app.hardening.test.js",
+      "estado": "passed",
+      "pruebas": 6,
+      "pasadas": 6,
+      "falladas": 0,
+      "duracion_ms": 9083,
+      "nombres": [
+        {
+          "titulo": "cabeceras de seguridad del API (#7) no anuncia Express y manda las cabeceras de endurecimiento",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cabeceras de seguridad del API (#7) CORP cross-origin: el frontend de otro origen puede leer las respuestas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errores que no filtran detalles internos (#9) /api/health con la base caida responde generico, sin el mensaje de Postgres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errores que no filtran detalles internos (#9) JSON malformado: 400 con mensaje propio, no el de la libreria",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errores que no filtran detalles internos (#9) cuerpo demasiado grande: 413",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errores que no filtran detalles internos (#9) origen no permitido por CORS: 403 con mensaje propio",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/app.ratelimit.test.js",
+      "estado": "passed",
+      "pruebas": 4,
+      "pasadas": 4,
+      "falladas": 0,
+      "duracion_ms": 9028,
+      "nombres": [
+        {
+          "titulo": "rate limit por cliente real detras del proxy cada cliente tiene su propio contador (no se comparte entre visitantes)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "rate limit por cliente real detras del proxy un X-Forwarded-For falso no da un contador nuevo (queda a la izquierda del cliente real)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "rate limit por cliente real detras del proxy sin TRUST_PROXY_HOPS ni RENDER no se confia en ningun proxy (local/pruebas)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "rate limit por cliente real detras del proxy en Render (variable RENDER) el default son 3 saltos",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/build.legal-fecha.test.js",
+      "estado": "passed",
+      "pruebas": 2,
+      "pasadas": 2,
+      "falladas": 0,
+      "duracion_ms": 163,
+      "nombres": [
+        {
+          "titulo": "fecha de actualización de las páginas legales no se calcula con new Date()",
+          "estado": "passed"
+        },
+        {
+          "titulo": "fecha de actualización de las páginas legales usa la constante fija LEGAL_ACTUALIZADO en Términos y en Privacidad",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/clasificacion.test.js",
+      "estado": "passed",
+      "pruebas": 11,
+      "pasadas": 11,
+      "falladas": 0,
+      "duracion_ms": 323,
+      "nombres": [
+        {
+          "titulo": "clasificacion las listas coinciden con las que valida el backend",
+          "estado": "passed"
+        },
+        {
+          "titulo": "clasificacion clavesDe devuelve la lista de cada sección",
+          "estado": "passed"
+        },
+        {
+          "titulo": "clasificacion solo Revolución Humana permite dejarla vacía",
+          "estado": "passed"
+        },
+        {
+          "titulo": "clasificacion aCampos: Noticias y Educación guardan la categoría y ninguna sub-sección",
+          "estado": "passed"
+        },
+        {
+          "titulo": "clasificacion aCampos: Revolución Humana usa la categoría por defecto o conserva la guardada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "clasificacion aValor es la operación inversa al cargar una pieza",
+          "estado": "passed"
+        },
+        {
+          "titulo": "admin.html el formulario trae la sub-sección dinámica con sus opciones por sección",
+          "estado": "passed"
+        },
+        {
+          "titulo": "admin.html categoría y sub-sección son campos ocultos y la Región se ofrece siempre",
+          "estado": "passed"
+        },
+        {
+          "titulo": "admin.html carga clasificacion.js antes que admin.js y ya no hay pestaña Noticias rápidas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "seccion «verificador» (video instruccional, 2026-11-16) no tiene sub-secciones, no las exige y guarda la categoria por defecto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "seccion «verificador» (video instruccional, 2026-11-16) el servidor acepta esa seccion",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/correccion.test.js",
+      "estado": "passed",
+      "pruebas": 11,
+      "pasadas": 11,
+      "falladas": 0,
+      "duracion_ms": 325,
+      "nombres": [
+        {
+          "titulo": "variantes LanguageTool recibe es o el inglés correspondiente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "variantes variante inicial: español de PR salvo que el destino sea inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "diccionario de Puerto Rico y del proyecto no marca puertorriqueñismos ni nombres del proyecto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "diccionario de Puerto Rico y del proyecto sigue marcando errores reales y los que no son de ortografía",
+          "estado": "passed"
+        },
+        {
+          "titulo": "diccionario de Puerto Rico y del proyecto respeta las palabras que el admin agrega",
+          "estado": "passed"
+        },
+        {
+          "titulo": "aplicarReemplazo reemplaza solo el fragmento indicado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cableado en el panel admin.html carga correccion.js antes de admin.js y ya no tiene el botón viejo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cableado en el panel el service worker lo precarga",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cableado en el panel los campos con barra existen en el panel",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sintaxis del panel admin.js se puede interpretar sin errores",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sintaxis del panel correccion.js se puede interpretar sin errores",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-apoyo.test.js",
+      "estado": "passed",
+      "pruebas": 41,
+      "pasadas": 41,
+      "falladas": 0,
+      "duracion_ms": 585,
+      "nombres": [
+        {
+          "titulo": "Página \"Apoya el canal\" (premium.html) título, subtítulo y secciones aprobadas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página \"Apoya el canal\" (premium.html) la frase de costos que el usuario pidió eliminar no aparece",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página \"Apoya el canal\" (premium.html) avisos legales: voluntario, 18+, no deducible, Stripe, cancelación y reembolso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página \"Apoya el canal\" (premium.html) describe los beneficios del apoyo mensual y que el único no incluye insignia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página \"Apoya el canal\" (premium.html) ya no habla de premium ni de suscripción",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página \"Apoya el canal\" (premium.html) botón mensual presente; el botón de apoyo único NO está si no hay APOYO_UNICO_URL",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Enlace de apoyo único (Payment Link) el enlace de PRUEBA de Stripe no queda en ningún archivo publicado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Enlace de apoyo único (Payment Link) el botón solo se genera si existe la variable de entorno",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Nombres en la interfaz el menú dice \"Apoya el canal\" y no \"Hazte premium\" en ninguna página",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Nombres en la interfaz el rol premium se muestra como \"Colaborador\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Nombres en la interfaz mensajes tras el pago aprobados",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Términos y Privacidad Términos tiene la sección \"Apoyo voluntario al canal\" y la numeración sigue de 1 a 9 sin saltos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Términos y Privacidad la sección dice 18+, no deducible, insignia, 1000 palabras y cancelación",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Términos y Privacidad Privacidad cubre compras y apoyo voluntario y qué se guarda",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Términos y Privacidad la fecha de actualización de los textos legales tiene traducción al inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Apoya el canal\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Sabías que PR — Apoya el canal\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Por qué existe este apoyo\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Cómo puedes apoyar\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Apoyo mensual:\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Apoyo único:\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"La tienda:\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Apoyar cada mes\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Apoyar una vez\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Lo que debes saber\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"No es una donación deducible de impuestos.\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Colaborador\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"5. Apoyo voluntario al canal\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"6. Conducta del usuario\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"9. Ley aplicable\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 \"Compras y apoyo voluntario:\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones de la Fase 1 el apoyo no se llama \"donation\" en inglés salvo para decir que NO es deducible",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Muro de agradecimiento \"Apoya el canal\" tiene la sección y su mensaje mientras no haya nombres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Muro de agradecimiento premium.js pinta los nombres con textContent (nunca como HTML) y sin traducirlos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Muro de agradecimiento Mi cuenta: formulario opt-in con casilla de autorización SIN marcar, y oculto por defecto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Muro de agradecimiento mi-cuenta.js solo muestra la sección a quien puede, exige la casilla y permite retirar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Muro de agradecimiento Privacidad explica el reconocimiento opcional y cómo retirarlo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Muro de agradecimiento textos del muro traducidos al inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Muro de agradecimiento las migraciones del muro existen y agregan solo columnas opcionales con límite de largo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Etiquetas visibles: \"apoyo\" y no \"premium\" (decisión del dueño, 2026-11-18) las tarjetas y el panel admin dicen \"Apoyo\"; \"premium\" solo queda como nombre interno",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Etiquetas visibles: \"apoyo\" y no \"premium\" (decisión del dueño, 2026-11-18) la etiqueta de las tarjetas tiene su traducción al inglés",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-apple.test.js",
+      "estado": "passed",
+      "pruebas": 12,
+      "pasadas": 12,
+      "falladas": 0,
+      "duracion_ms": 334,
+      "nombres": [
+        {
+          "titulo": "campos de formulario: 16 px para que el iPhone no haga zoom al tocarlos la regla base de input, textarea y select usa 1rem (16 px) y no 0.95rem",
+          "estado": "passed"
+        },
+        {
+          "titulo": "campos de formulario: 16 px para que el iPhone no haga zoom al tocarlos la letra base del documento es de 16 px (1rem = 16 px)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cajón del carrito: no queda tapado por la barra de Safari del iPhone mantiene 100vh como respaldo y agrega 100dvh justo después",
+          "estado": "passed"
+        },
+        {
+          "titulo": "la página no se arrastra de lado en el iPhone el cajón del carrito cerrado no queda fuera de la pantalla: right:0, recortado y oculto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "la página no se arrastra de lado en el iPhone html y body recortan el desborde horizontal (overflow-x:clip, que no rompe position:sticky)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "la página no se arrastra de lado en el iPhone ningún elemento del CSS se estaciona fuera de la pantalla con right o left negativos en un position:fixed",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cabecera en pantallas angostas: el botón de menú siempre cabe el botón de menú no se encoge y el grupo de controles sí; lo único que se acorta es el botón de sesión, con «…»",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cabecera en pantallas angostas: el botón de menú siempre cabe en teléfono (≤560 px) se aprietan los espacios y se oculta el nombre junto al logo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cabecera en pantallas angostas: el botón de menú siempre cabe el script de WebKit también mide que el botón de menú quede dentro de la pantalla",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sin almacenamiento (Safari con «Bloquear todas las cookies» lanza SecurityError) script.js lee y guarda el tema dentro de try/catch",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sin almacenamiento (Safari con «Bloquear todas las cookies» lanza SecurityError) debate.js confirma la edad con sessionStorage dentro de try/catch y la recuerda en memoria si no se puede",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sin almacenamiento (Safari con «Bloquear todas las cookies» lanza SecurityError) los demás usos de storage del sitio ya están protegidos con try/catch",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-auth-errores.test.js",
+      "estado": "passed",
+      "pruebas": 11,
+      "pasadas": 11,
+      "falladas": 0,
+      "duracion_ms": 383,
+      "nombres": [
+        {
+          "titulo": "errorAuthEnEspanol traduce el codigo same_password",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errorAuthEnEspanol traduce el codigo invalid_credentials",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errorAuthEnEspanol traduce el codigo mfa_verification_failed",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errorAuthEnEspanol tambien acepta error_code (otro nombre que usa la API)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errorAuthEnEspanol un codigo desconocido muestra el mensaje original (mejor ingles que nada)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errorAuthEnEspanol sin codigo ni mensaje, un texto generico en espanol; sin error, vacio",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errorAuthEnEspanol todas las traducciones estan en espanol y ninguna filtra detalles tecnicos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "errorAuthEnEspanol el mensaje exacto que vio el usuario al cambiar contraseña ya no sale en ingles",
+          "estado": "passed"
+        },
+        {
+          "titulo": "idioma del visitante cada mensaje de error tiene traduccion al ingles en i18n/en.json",
+          "estado": "passed"
+        },
+        {
+          "titulo": "idioma del visitante en ingles el mensaje de contrasena repetida sale en ingles",
+          "estado": "passed"
+        },
+        {
+          "titulo": "idioma del visitante la etiqueta \"No se pudo verificar\" tambien esta traducida",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-brigada.test.js",
+      "estado": "passed",
+      "pruebas": 13,
+      "pasadas": 13,
+      "falladas": 0,
+      "duracion_ms": 249,
+      "nombres": [
+        {
+          "titulo": "orden de los niveles: los agentes primero Contenidos: Clasificación, Contenido, Multimedia y Citación",
+          "estado": "passed"
+        },
+        {
+          "titulo": "orden de los niveles: los agentes primero Noticias rápidas ya no existe (2026-11-16): su espacio vive en Contenidos > sección Noticias",
+          "estado": "passed"
+        },
+        {
+          "titulo": "orden de los niveles: los agentes primero el panel visible al abrir una pieza nueva es el de los agentes y la numeración sigue el orden",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sin cajas repetidas: una sola URL y una sola caja de idioma contenido: ya no existen las cajas viejas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sin cajas repetidas: una sola URL y una sola caja de idioma noticia: ya no existen las cajas viejas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sin cajas repetidas: una sola URL y una sola caja de idioma la URL de la fuente es una sola, la de la mesa (en Noticias sigue siendo obligatoria)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "sin cajas repetidas: una sola URL y una sola caja de idioma el idioma de la pieza es una sola caja, en la mesa, y no está en la pestaña Clasificación",
+          "estado": "passed"
+        },
+        {
+          "titulo": "pestañas del panel: Seguridad, Brigada, Gastos, Reportes, Taller y Noticias rápidas ya no están (viven en otro panel o en Contenidos) no existe la pestaña seguridad",
+          "estado": "passed"
+        },
+        {
+          "titulo": "pestañas del panel: Seguridad, Brigada, Gastos, Reportes, Taller y Noticias rápidas ya no están (viven en otro panel o en Contenidos) no existe la pestaña agentes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "pestañas del panel: Seguridad, Brigada, Gastos, Reportes, Taller y Noticias rápidas ya no están (viven en otro panel o en Contenidos) no existe la pestaña gastos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "pestañas del panel: Seguridad, Brigada, Gastos, Reportes, Taller y Noticias rápidas ya no están (viven en otro panel o en Contenidos) no existe la pestaña reportes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "pestañas del panel: Seguridad, Brigada, Gastos, Reportes, Taller y Noticias rápidas ya no están (viven en otro panel o en Contenidos) no existe la pestaña taller",
+          "estado": "passed"
+        },
+        {
+          "titulo": "pestañas del panel: Seguridad, Brigada, Gastos, Reportes, Taller y Noticias rápidas ya no están (viven en otro panel o en Contenidos) no existe la pestaña noticias",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-casillas.test.js",
+      "estado": "passed",
+      "pruebas": 19,
+      "pasadas": 19,
+      "falladas": 0,
+      "duracion_ms": 412,
+      "nombres": [
+        {
+          "titulo": "insignias de las casillas (orden alfabético) sin casillas no agrega nada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "insignias de las casillas (orden alfabético) con las 5 marcadas salen en orden alfabético: Actualizada, Fijada, Sensible, Última hora, Verificada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "insignias de las casillas (orden alfabético) la tarjeta de contenido muestra las insignias",
+          "estado": "passed"
+        },
+        {
+          "titulo": "formulario del panel: casillas en orden alfabético existen las 5 casillas y van en orden alfabético",
+          "estado": "passed"
+        },
+        {
+          "titulo": "formulario del panel: casillas en orden alfabético admin.js las lee y las carga con los mismos nombres que usa el servidor",
+          "estado": "passed"
+        },
+        {
+          "titulo": "formulario del panel: casillas en orden alfabético la sección «Verificador» se puede escoger y el panel arranca en Contenidos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos home.js no pide /api/noticias",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos noticias.js no pide /api/noticias",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos articulo.js no pide /api/noticias",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos admin.js no pide /api/noticias",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos recurso.js no pide /api/noticias",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos la portada pide la sección Noticias de Contenidos y pinta con la tarjeta de contenido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos el collage de Noticias lee solo Contenidos y deja fuera el espacio del Verificador",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos un enlace viejo articulo.html?id=x pasa a recurso.html?id=x",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias rápidas ya no existe: todo sale de Contenidos recurso.js conoce las secciones Noticias y Verificador",
+          "estado": "passed"
+        },
+        {
+          "titulo": "espacio del video del Verificador la página trae el espacio nuevo y conserva la guía de 4 pasos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "espacio del video del Verificador verificador.js pide la sección «verificador», solo acepta https y arma el iframe sin HTML en línea",
+          "estado": "passed"
+        },
+        {
+          "titulo": "RSS dinámico Netlify pide /rss.xml al servidor y ya no existe el archivo fijo ni su generación",
+          "estado": "passed"
+        },
+        {
+          "titulo": "copia de seguridad del contenido que se vació el sitio no sirve archivos de respaldo (.bak) desde la carpeta publicada",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-contacto.test.js",
+      "estado": "passed",
+      "pruebas": 18,
+      "pasadas": 18,
+      "falladas": 0,
+      "duracion_ms": 513,
+      "nombres": [
+        {
+          "titulo": "El CSP deja que el formulario de contacto se envíe script.js envía el formulario con fetch al \"action\" (Formspree)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "El CSP deja que el formulario de contacto se envíe el \"action\" del formulario apunta a formspree.io",
+          "estado": "passed"
+        },
+        {
+          "titulo": "El CSP deja que el formulario de contacto se envíe connect-src del _headers permite formspree.io (sin esto sale \"Sin conexión\")",
+          "estado": "passed"
+        },
+        {
+          "titulo": "El CSP deja que el formulario de contacto se envíe form-action sigue permitiendo formspree.io (respaldo sin JavaScript)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "El CSP deja que el formulario de contacto se envíe build.js (la fuente del _headers) también lo trae",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: marcado y textos el campo de correo sigue siendo editable (ni readonly ni disabled)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: marcado y textos la pista existe, empieza oculta y está después del correo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: marcado y textos la pista está traducida al inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: marcado y textos el código escribe con .value y nunca como HTML",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento con sesión rellena correo (contacto y boletín) y nombre, y muestra la pista",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento sin sesión no toca nada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento si la persona ya escribió otro correo, no se lo pisa",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento si el navegador ya autocompletó el campo (no vacío), se respeta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento si la persona editó el correo después de rellenarse, la pista se oculta y se conserva su texto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento al cerrar sesión vacía lo que rellenó el sitio, pero no lo que escribió la persona",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento el nombre queda vacío si la cuenta no tiene nombre conocido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento tras enviar (reset) con sesión, se vuelve a rellenar y la pista reaparece",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Relleno del correo con la sesión: comportamiento tras enviar (reset) sin sesión, la pista obsoleta se oculta y los campos quedan vacíos",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-contenido-ia.test.js",
+      "estado": "passed",
+      "pruebas": 5,
+      "pasadas": 5,
+      "falladas": 0,
+      "duracion_ms": 157,
+      "nombres": [
+        {
+          "titulo": "etiquetas del formulario de Contenidos «ac-subtitulo» no lleva texto entre paréntesis",
+          "estado": "passed"
+        },
+        {
+          "titulo": "etiquetas del formulario de Contenidos «ac-cuerpo» no lleva texto entre paréntesis",
+          "estado": "passed"
+        },
+        {
+          "titulo": "etiquetas del formulario de Contenidos «ac-autor» no lleva texto entre paréntesis",
+          "estado": "passed"
+        },
+        {
+          "titulo": "etiquetas del formulario de Contenidos «ac-fuente-texto» no lleva texto entre paréntesis",
+          "estado": "passed"
+        },
+        {
+          "titulo": "etiquetas del formulario de Contenidos el Resumen no tiene tope de largo (solo un mínimo para que no se guarde vacío)",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-fase6.test.js",
+      "estado": "passed",
+      "pruebas": 7,
+      "pasadas": 7,
+      "falladas": 0,
+      "duracion_ms": 260,
+      "nombres": [
+        {
+          "titulo": "Contenidos: Guardar borrador / AL AIRE el formulario tiene los dos botones (sin \"submit\") y la casilla oculta publicado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Contenidos: Guardar borrador / AL AIRE el guardado envía publicado y un borrador nunca va destacado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Contenidos: Guardar borrador / AL AIRE la lista marca los borradores",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Reportar comentarios de artículos el cuadro de reporte es compartido y se carga antes que debate.js y comentarios.js",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Reportar comentarios de artículos comentarios.js reporta con el tipo articulo_comentario y el moderador puede eliminar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Reportar comentarios de artículos los textos nuevos tienen traducción al inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Mi cuenta avisa que el nombre es público y muestra la etiqueta y el enlace del moderador",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-filtros.test.js",
+      "estado": "passed",
+      "pruebas": 26,
+      "pasadas": 26,
+      "falladas": 0,
+      "duracion_ms": 335,
+      "nombres": [
+        {
+          "titulo": "Noticias: botones de región hay una fila de 4 botones de región, con Puerto Rico activo, debajo de las categorías",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias: botones de región carga regiones.js antes que noticias.js",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Educación: botones por categoría hay 4 botones de categoría educativa, el primero activo, conectados a la grilla",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate: formulario sin \"Enfoque\" el formulario ya no tiene el selector de enfoque ni lo envía",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate: formulario sin \"Enfoque\" sigue mostrando la etiqueta de las publicaciones que ya tienen enfoque",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones nuevas \"Filtrar por región\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones nuevas \"Filtrar por tema\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones nuevas \"Aún no hay noticias en esta selección.\" está en inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias: categorías como interruptores y sin \"General\" no hay botón \"Todas\" ni categoría \"general\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias: categorías como interruptores y sin \"General\" hay 11 categorías y ninguna queda activa al entrar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Noticias: categorías como interruptores y sin \"General\" noticias.js pide todas las secciones (sin ?seccion=) y usa armarCollage",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Admin: sin \"General\" y la categoría hay que elegirla Noticias rápidas ya no existe: no queda ningún selector an-categoria",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Admin: sin \"General\" y la categoría hay que elegirla el formulario de Contenidos usa la sub-sección dinámica: nunca ofrece \"general\" y la exige en Noticias y Educación",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Admin: sin \"General\" y la categoría hay que elegirla admin.js ya no usa \"general\" como valor por defecto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Migración de categorías la migración reclasifica \"general\" y reemplaza las dos restricciones CHECK sin \"general\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones del collage \"Original\" está en el diccionario",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducciones del collage \"Elige una categoría\" está en el diccionario",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml: redirección de la dirección de Netlify al dominio propio la primera regla manda el nombre exacto de netlify.app a sabiasquepr.com conservando la ruta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml: redirección de la dirección de Netlify al dominio propio no usa un comodín que alcance a los deploy previews ni branch deploys",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Educación: región independiente del tema la grilla tiene dos grupos de filtro: tema y región",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Educación: región independiente del tema la fila de región empieza en \"Todas\" y se filtra en el navegador sin reiniciarse al cambiar de tema",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Educación: región independiente del tema carga regiones.js antes que contenidos.js",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Educación: región independiente del tema contenidos.js respeta data-local y data-sin-reinicio",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate y comentarios: el correo del autor no se muestra (privacidad) debate.js muestra autor_nombre, no autor_email",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate y comentarios: el correo del autor no se muestra (privacidad) comentarios.js muestra autor_nombre, no autor_email",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Educación: sin etiqueta de edad (política legal, COPPA) el banner de reglas del foro no declara ninguna edad",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-fuentes.test.js",
+      "estado": "passed",
+      "pruebas": 7,
+      "pasadas": 7,
+      "falladas": 0,
+      "duracion_ms": 251,
+      "nombres": [
+        {
+          "titulo": "formularios: dónde se agregan las otras fuentes la mesa de contenido tiene su lista y su botón «Agregar otra fuente»",
+          "estado": "passed"
+        },
+        {
+          "titulo": "funciones puras de las otras fuentes el nombre por defecto es el sitio del enlace, sin «www.»",
+          "estado": "passed"
+        },
+        {
+          "titulo": "funciones puras de las otras fuentes de las filas del formulario salen solo las que tienen algo, con el nombre completado y sin espacios",
+          "estado": "passed"
+        },
+        {
+          "titulo": "funciones puras de las otras fuentes la fila escapa lo que traiga y deja los dos campos y el botón de quitar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "páginas públicas: «Otras fuentes» lista cada fuente, con enlace solo si es http(s) seguro, y escapa el nombre",
+          "estado": "passed"
+        },
+        {
+          "titulo": "páginas públicas: «Otras fuentes» sin fuentes (o datos raros) no pinta nada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "páginas públicas: «Otras fuentes» la página de contenido la usa y el texto está traducido al inglés",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-panel-arranque.test.js",
+      "estado": "passed",
+      "pruebas": 1,
+      "pasadas": 1,
+      "falladas": 0,
+      "duracion_ms": 14304,
+      "nombres": [
+        {
+          "titulo": "el panel arranca sin errores y pinta noticias, contenidos, productos y reportes",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-panel-ux.test.js",
+      "estado": "passed",
+      "pruebas": 22,
+      "pasadas": 22,
+      "falladas": 0,
+      "duracion_ms": 352,
+      "nombres": [
+        {
+          "titulo": "Contenidos: publicar solo con los botones («Noticias rápidas» ya no existe) «AL AIRE» y «Guardar borrador» están en el formulario de Contenidos y Noticias rápidas no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Contenidos: publicar solo con los botones («Noticias rápidas» ya no existe) el botón de Contenidos tampoco envía con Enter",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Contenidos: publicar solo con los botones («Noticias rápidas» ya no existe) admin.js decide borrador o publicado según el botón y envía con requestSubmit",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Aviso del campo obligatorio que falta (paneles ocultos) abre el panel que contiene el primer campo inválido y dice cuál falta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Aviso del campo obligatorio que falta (paneles ocultos) si el panel ya está visible no lo vuelve a abrir, pero igual avisa",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Aviso del campo obligatorio que falta (paneles ocultos) con varios campos inválidos en la misma validación solo atiende el primero",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Panel de administración: selección visible y traducción la selección de texto en los campos del panel no usa el color del ::selection global",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Panel de administración: selección visible y traducción la traducción es un bloque colapsable con estado visible",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate: editar y reportar la edición reenvía lo que la API reemplaza (sub-sección, región, enlace) y recorta el texto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate: editar y reportar sin región ni enlace no manda esos campos; el administrador conserva destacado y tema",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate: editar y reportar Editar llama a PATCH /api/foro/posts/:id y solo lo ve el dueño o el administrador",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate: editar y reportar Reportar usa un cuadro propio (no prompt) y no aparece en lo propio",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Debate: editar y reportar los textos nuevos del debate tienen traducción al inglés",
+          "estado": "passed"
+        },
+        {
+          "titulo": "2FA del panel: verifica solo al escribir el sexto dígito deja solo números (también al pegar) y recorta a 6",
+          "estado": "passed"
+        },
+        {
+          "titulo": "2FA del panel: verifica solo al escribir el sexto dígito el código está completo solo con exactamente 6 dígitos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "2FA del panel: verifica solo al escribir el sexto dígito el campo envía el formulario al completar el código y no si ya se está verificando",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Guardado continuo: texto alternativo opcional y formulario que sigue abierto el texto alternativo es opcional: vacío se reemplaza por el título",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Guardado continuo: texto alternativo opcional y formulario que sigue abierto ac-portada-alt ya no es obligatorio y dice que es opcional",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Guardado continuo: texto alternativo opcional y formulario que sigue abierto ap-imagen-alt ya no es obligatorio y dice que es opcional",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Guardado continuo: texto alternativo opcional y formulario que sigue abierto un borrador no puede ser la noticia destacada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Guardado continuo: texto alternativo opcional y formulario que sigue abierto guardar contenido o producto deja el formulario abierto y usa despuesDeGuardar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Guardado continuo: texto alternativo opcional y formulario que sigue abierto una traducción sin guardar se guarda junto con la pieza",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/frontend-verificador.test.js",
+      "estado": "passed",
+      "pruebas": 8,
+      "pasadas": 8,
+      "falladas": 0,
+      "duracion_ms": 184,
+      "nombres": [
+        {
+          "titulo": "Página del Verificador de Confianza tiene la nota de 200 palabras, los formatos seguros y el aviso de que no garantiza",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página del Verificador de Confianza tiene la guía interactiva de 4 pasos y un reporte de ejemplo marcado como ficticio",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página del Verificador de Confianza la guía no usa el almacenamiento sin protección (la página sigue funcionando si falla)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página del Verificador de Confianza todo lo que dice la IA se pinta con textContent, nunca como HTML",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página del Verificador de Confianza no muestra costos al usuario",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página del Verificador de Confianza el menú tiene el enlace al Verificador",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página del Verificador de Confianza The Oracle entiende el pedido y la persona lo confirma antes de gastar un uso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Página del Verificador de Confianza ya no muestra el ranking público de The Oracle ni enlaza a esa página",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/i18n-paginas.test.js",
+      "estado": "passed",
+      "pruebas": 12,
+      "pasadas": 12,
+      "falladas": 0,
+      "duracion_ms": 333,
+      "nombres": [
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas verificador.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas 404.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas premium.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas index.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas noticias.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas tienda.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas educacion.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas revolucion-humana.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas contacto.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas mi-cuenta.html: no queda ningún texto visible sin traducir",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas los mensajes y el reporte de ejemplo del Verificador (verificador.js) están traducidos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Traducción completa al inglés de las páginas públicas no hay claves repetidas ni vacías",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/i18n/i18n.test.js",
+      "estado": "passed",
+      "pruebas": 14,
+      "pasadas": 14,
+      "falladas": 0,
+      "duracion_ms": 273,
+      "nombres": [
+        {
+          "titulo": "normalizar colapsa espacios y saltos de linea, y recorta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "idioma solo \"en\" es ingles; cualquier otra cosa cae a espanol",
+          "estado": "passed"
+        },
+        {
+          "titulo": "idioma locale de fechas por idioma",
+          "estado": "passed"
+        },
+        {
+          "titulo": "idioma detecta la pagina de administracion con y sin .html",
+          "estado": "passed"
+        },
+        {
+          "titulo": "formatear sustituye {variables} y deja las desconocidas intactas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "traducirTexto traduce exacto conservando espacios de los extremos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "traducirTexto normaliza espacios internos antes de buscar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "traducirTexto deja igual lo que no esta en el diccionario y el texto vacio",
+          "estado": "passed"
+        },
+        {
+          "titulo": "traducirTexto usa claves con {variables} como patrones",
+          "estado": "passed"
+        },
+        {
+          "titulo": "traducirTexto no se confunde con claves del prototipo de Object",
+          "estado": "passed"
+        },
+        {
+          "titulo": "traducirTexto un texto en ingles (ya traducido) no cambia otra vez",
+          "estado": "passed"
+        },
+        {
+          "titulo": "traducir (t) traduce e interpola; sin diccionario devuelve el original interpolado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "compilarPatrones escapa caracteres especiales de la clave",
+          "estado": "passed"
+        },
+        {
+          "titulo": "compilarPatrones ignora claves sin variables y valores que no son texto",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/ia-herramientas.test.js",
+      "estado": "passed",
+      "pruebas": 11,
+      "pasadas": 11,
+      "falladas": 0,
+      "duracion_ms": 324,
+      "nombres": [
+        {
+          "titulo": "catalogo y limites las claves y los limites coinciden con los que valida el backend",
+          "estado": "passed"
+        },
+        {
+          "titulo": "catalogo y limites cada IA conocida tiene su icono en images/ia/ (SVG con titulo)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "catalogo y limites el nombre visible de las conocidas va con su capitalizacion; las otras se muestran tal cual",
+          "estado": "passed"
+        },
+        {
+          "titulo": "normalizar recorta, pasa las conocidas a minuscula y quita vacias y repetidas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "normalizar ignora lo que no es texto y respeta el maximo y el largo del nombre",
+          "estado": "passed"
+        },
+        {
+          "titulo": "insigniasHtml sin herramientas no pinta nada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "insigniasHtml las conocidas llevan icono y nombre; las escritas a mano solo el nombre",
+          "estado": "passed"
+        },
+        {
+          "titulo": "insigniasHtml escapa el HTML de un nombre escrito a mano",
+          "estado": "passed"
+        },
+        {
+          "titulo": "conexion con el formulario y las paginas los formularios tienen su selector, y las paginas cargan el modulo antes de editorial.js",
+          "estado": "passed"
+        },
+        {
+          "titulo": "conexion con el formulario y las paginas el panel envia iaHerramientas al guardar contenidos y las carga al editar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "conexion con el formulario y las paginas las tarjetas y paginas de noticias y contenidos muestran la divulgacion con los iconos",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/middleware/auth.jwt.test.js",
+      "estado": "passed",
+      "pruebas": 8,
+      "pasadas": 8,
+      "falladas": 0,
+      "duracion_ms": 229,
+      "nombres": [
+        {
+          "titulo": "verificacion del JWT con emisor y audiencia requireAuth exige iss = <proyecto>/auth/v1 y aud = authenticated",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificacion del JWT con emisor y audiencia tryAuth usa las mismas exigencias",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificacion del JWT con emisor y audiencia un token con emisor/audiencia equivocados (jose lo rechaza) responde 401",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cuentas suspendidas (ban en Supabase) requireAuth responde 401 \"Cuenta suspendida.\" si banned_until esta en el futuro",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cuentas suspendidas (ban en Supabase) un ban ya vencido no bloquea, y banned_until no llega a req.user",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cuentas suspendidas (ban en Supabase) sin ban (null) pasa normal",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cuentas suspendidas (ban en Supabase) tryAuth trata a un suspendido como visitante anonimo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cuentas suspendidas (ban en Supabase) la consulta pide banned_until a auth.users (no se puede olvidar por accidente)",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/middleware/auth.mfa.test.js",
+      "estado": "passed",
+      "pruebas": 16,
+      "pasadas": 16,
+      "falladas": 0,
+      "duracion_ms": 9012,
+      "nombres": [
+        {
+          "titulo": "admin con sesion aal1 (solo contrasena) pierde el poder: rol efectivo \"usuario\" y requireAdmin responde 403 mfa_required",
+          "estado": "passed"
+        },
+        {
+          "titulo": "admin con sesion aal1 (solo contrasena) un JWT sin claim aal se trata como aal1 (nunca se asume MFA)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "admin con sesion aal1 (solo contrasena) las comprobaciones de rol dentro de las rutas tambien lo ven como usuario",
+          "estado": "passed"
+        },
+        {
+          "titulo": "admin con sesion aal2 (contrasena + codigo) conserva el poder y requireAdmin deja pasar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "moderador aal1: requireModerador responde 403 mfa_required",
+          "estado": "passed"
+        },
+        {
+          "titulo": "moderador aal2: pasa",
+          "estado": "passed"
+        },
+        {
+          "titulo": "usuarios sin poder no se ven afectados usuario con aal1 conserva su rol y no recibe mfaPendiente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "usuarios sin poder no se ven afectados premium con aal1 conserva su rol y no recibe mfaPendiente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "usuarios sin poder no se ven afectados un usuario normal en requireAdmin recibe el 403 de siempre (no el de MFA)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "interruptor de emergencia ADMIN_MFA_REQUIRED=false desactiva la exigencia (admin con aal1 mantiene el poder)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "interruptor de emergencia ADMIN_MFA_REQUIRED=false cualquier otro valor (o ausente) sigue exigiendo MFA",
+          "estado": "passed"
+        },
+        {
+          "titulo": "tryAuth (rutas publicas que muestran mas al admin, ej. borradores) admin aal1 NO ve los borradores: rol efectivo usuario",
+          "estado": "passed"
+        },
+        {
+          "titulo": "tryAuth (rutas publicas que muestran mas al admin, ej. borradores) admin aal2 si conserva el rol",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/me (lo que lee el panel para decidir si pide el codigo) admin aal1: devuelve el rol REAL y mfaPendiente=true",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/me (lo que lee el panel para decidir si pide el codigo) admin aal2: mfaPendiente=false",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/me (lo que lee el panel para decidir si pide el codigo) usuario normal: sin cambios",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/middleware/auth.test.js",
+      "estado": "passed",
+      "pruebas": 5,
+      "pasadas": 5,
+      "falladas": 0,
+      "duracion_ms": 1037,
+      "nombres": [
+        {
+          "titulo": "requireAuth responde 401 si no hay encabezado Authorization",
+          "estado": "passed"
+        },
+        {
+          "titulo": "requireAuth responde 401 si el encabezado no tiene el formato Bearer",
+          "estado": "passed"
+        },
+        {
+          "titulo": "requireAdmin responde 403 si el usuario no tiene rol admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "requireAdmin responde 403 si no hay usuario en el request",
+          "estado": "passed"
+        },
+        {
+          "titulo": "requireAdmin llama a next() si el usuario tiene rol admin",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/netlify-config.test.js",
+      "estado": "passed",
+      "pruebas": 9,
+      "pasadas": 9,
+      "falladas": 0,
+      "duracion_ms": 216,
+      "nombres": [
+        {
+          "titulo": "netlify.toml construye y publica solo la carpeta frontend/",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml el archivo interno \"/build.js\" se devuelve como 404",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml el archivo interno \"/package.json\" se devuelve como 404",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml el archivo interno \"/scripts/*\" se devuelve como 404",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml el archivo interno \"/_content/*\" se devuelve como 404",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml el archivo interno \"/i18n/revisar-legal.md\" se devuelve como 404",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml un cambio en netlify.toml tambien dispara el build (la regla ignore lo incluye)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml las vistas previas de PR solo se construyen en ramas preview/* (cada build cuesta creditos)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "netlify.toml la redireccion de la direccion de netlify.app a sabiasquepr.com sigue primero",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/regiones.test.js",
+      "estado": "passed",
+      "pruebas": 14,
+      "pasadas": 14,
+      "falladas": 0,
+      "duracion_ms": 260,
+      "nombres": [
+        {
+          "titulo": "filtrarPorRegion sin región elegida devuelve todo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "filtrarPorRegion con una región, muestra las de esa región y las que no tienen región",
+          "estado": "passed"
+        },
+        {
+          "titulo": "filtrarPorRegion una región sin contenido propio sigue mostrando las que no tienen región (nada publicado desaparece)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "filtrarPorRegion no modifica el arreglo original",
+          "estado": "passed"
+        },
+        {
+          "titulo": "es18Mas solo Corrupción Humana e Ilógica Humana son 18+",
+          "estado": "passed"
+        },
+        {
+          "titulo": "espaciarPremium no deja dos premium seguidas ni más de una por cada 4",
+          "estado": "passed"
+        },
+        {
+          "titulo": "espaciarPremium no descarta nada: lo que no cabe va al final",
+          "estado": "passed"
+        },
+        {
+          "titulo": "espaciarPremium sin premium, el orden no cambia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "armarCollage incluye al menos una pieza de cada sección/subsección y las reparte por turnos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "armarCollage 18+ (opción A): sin edad verificada NO entran; con edad verificada sí",
+          "estado": "passed"
+        },
+        {
+          "titulo": "armarCollage aplica la región: lo de otra región sale; lo sin región se queda",
+          "estado": "passed"
+        },
+        {
+          "titulo": "armarCollage es estable: el mismo resultado en cada llamada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "armarCollage premium: con una proporción normal (2 de 10) nunca quedan dos seguidas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "armarCollage con lista vacía devuelve vacío",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/admin.integration.test.js",
+      "estado": "passed",
+      "pruebas": 8,
+      "pasadas": 8,
+      "falladas": 0,
+      "duracion_ms": 9045,
+      "nombres": [
+        {
+          "titulo": "GET /api/admin/estado-seguridad 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/estado-seguridad 403 si el usuario no es admin ni moderador",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/estado-seguridad 200 con los datos reales para un admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/estado-seguridad 200 para un moderador",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/ordenes (P-3) 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/ordenes (P-3) 403 si el usuario no es admin (ni siquiera moderador)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/ordenes (P-3) 200 con los pedidos, direccion y valores por defecto de paginacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/ordenes (P-3) limit tiene tope de 100 y offset nunca es negativo",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/admin.traducciones.integration.test.js",
+      "estado": "passed",
+      "pruebas": 14,
+      "pasadas": 14,
+      "falladas": 0,
+      "duracion_ms": 9282,
+      "nombres": [
+        {
+          "titulo": "acceso a /api/admin/traducciones get /api/admin/traducciones/noticia/a: 401 sin sesion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "acceso a /api/admin/traducciones put /api/admin/traducciones/noticia/a/en: 401 sin sesion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "acceso a /api/admin/traducciones delete /api/admin/traducciones/noticia/a/en: 401 sin sesion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "acceso a /api/admin/traducciones get /api/admin/traducciones/noticia/a: 403 para usuario y moderador (solo admin)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "acceso a /api/admin/traducciones put /api/admin/traducciones/noticia/a/en: 403 para usuario y moderador (solo admin)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "acceso a /api/admin/traducciones delete /api/admin/traducciones/noticia/a/en: 403 para usuario y moderador (solo admin)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/traducciones/:tipo/:id 400 con tipo invalido (no toca la base de datos)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/traducciones/:tipo/:id 404 si la pieza no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/admin/traducciones/:tipo/:id 200 devuelve idioma original y las traducciones por idioma",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/admin/traducciones/:tipo/:id/:idioma 400 con campos invalidos o vacios",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/admin/traducciones/:tipo/:id/:idioma 404 si la pieza no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/admin/traducciones/:tipo/:id/:idioma 400 si se traduce al idioma en que la pieza ya esta escrita",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/admin/traducciones/:tipo/:id/:idioma 200 hace upsert con los campos saneados y el admin que lo guardo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/admin/traducciones/:tipo/:id/:idioma 200 borra, 404 si no existia, 400 con idioma invalido",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/agradecimientos.integration.test.js",
+      "estado": "passed",
+      "pruebas": 17,
+      "pasadas": 17,
+      "falladas": 0,
+      "duracion_ms": 9475,
+      "nombres": [
+        {
+          "titulo": "GET /api/agradecimientos (público) 200 con la lista de nombres, sin pedir sesión",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/agradecimientos (público) solo consulta colaboradores activos con autorización, sin cuentas suspendidas, y devuelve solo el nombre",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/agradecimientos (público) lista vacía es válida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/agradecimientos (público) un error de base de datos devuelve 500 genérico (sin filtrar detalles)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) 401 sin sesión",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) 403 si la cuenta no apoya cada mes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) 400 con un nombre inválido ()",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) 400 con un nombre inválido (A)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) 400 con un nombre inválido (<b>x</b>)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) 400 con un nombre inválido (a@b.com)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) 400 con un nombre inválido (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) 200 un colaborador autoriza su nombre; se limpia y se guarda solo para su propia cuenta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil/agradecimiento (autorizar) el admin también puede aparecer",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET y DELETE /api/perfil/agradecimiento GET devuelve el estado de la propia cuenta y si puede aparecer",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET y DELETE /api/perfil/agradecimiento GET: una cuenta gratuita ve que no puede",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET y DELETE /api/perfil/agradecimiento DELETE retira la autorización de la propia cuenta, incluso si ya no es colaborador",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET y DELETE /api/perfil/agradecimiento DELETE sin sesión: 401",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/casillas-rss.integration.test.js",
+      "estado": "passed",
+      "pruebas": 19,
+      "pasadas": 19,
+      "falladas": 0,
+      "duracion_ms": 9421,
+      "nombres": [
+        {
+          "titulo": "casillas editoriales POST guarda las 5 casillas al final del INSERT (en orden) y por defecto en falso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "casillas editoriales POST con casillas marcadas las persiste",
+          "estado": "passed"
+        },
+        {
+          "titulo": "casillas editoriales 400 si «ultimaHora» no es verdadero o falso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "casillas editoriales 400 si «actualizada» no es verdadero o falso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "casillas editoriales 400 si «fijada» no es verdadero o falso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "casillas editoriales 400 si «verificada» no es verdadero o falso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "casillas editoriales 400 si «sensible» no es verdadero o falso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "casillas editoriales PUT parcial conserva las casillas que ya tenia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "casillas editoriales la lista publica pone primero lo fijado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "seccion «verificador» (video instruccional) POST de un video para el Verificador se acepta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "seccion «verificador» (video instruccional) un video del Verificador sin enlace se rechaza como cualquier video",
+          "estado": "passed"
+        },
+        {
+          "titulo": "seccion «verificador» (video instruccional) una seccion inventada sigue rechazada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "RSS dinamico (/rss.xml) arma el RSS con lo publicado, escapa el texto y no incluye el espacio del Verificador",
+          "estado": "passed"
+        },
+        {
+          "titulo": "RSS dinamico (/rss.xml) sin piezas devuelve un RSS valido y vacio",
+          "estado": "passed"
+        },
+        {
+          "titulo": "RSS dinamico (/rss.xml) si la base falla responde 500 generico",
+          "estado": "passed"
+        },
+        {
+          "titulo": "migracion automatica (idempotente) agrega las 5 columnas con valor por defecto y amplia la lista de secciones una sola vez",
+          "estado": "passed"
+        },
+        {
+          "titulo": "migracion automatica (idempotente) si la seccion ya esta permitida no vuelve a tocar la restriccion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "migracion automatica (idempotente) nunca tumba el servidor: si falla, lo registra y devuelve false",
+          "estado": "passed"
+        },
+        {
+          "titulo": "migracion automatica (idempotente) NO borra ni cambia datos: solo ALTER ... ADD COLUMN y la restriccion",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/comentarios.integration.test.js",
+      "estado": "passed",
+      "pruebas": 18,
+      "pasadas": 18,
+      "falladas": 0,
+      "duracion_ms": 9270,
+      "nombres": [
+        {
+          "titulo": "GET /api/comentarios 400 si faltan tipo o itemId",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/comentarios 200 con la lista de comentarios de un item",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios 400 si el cuerpo es muy corto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios 404 si el contenido/noticia referido no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios 201 crea el comentario contra \"contenidos\" cuando tipo=contenido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios 201 crea el comentario contra \"noticias\" cuando tipo=noticia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/comentarios/:id -- cierra sus reportes borra el comentario y pasa sus reportes pendientes a revisado en una sola sentencia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/comentarios/:id 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/comentarios/:id 404 si el comentario no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/comentarios/:id 403 si no es el dueño ni admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/comentarios/:id 200 si es el dueño",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/comentarios/:id 200 si es admin borrando el comentario de otro",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/comentarios/:id 200 si es moderador borrando el comentario de otro",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios -- largo y espera (U-9) 400 en espanol si el comentario supera 2000 caracteres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios -- largo y espera (U-9) 429 si la misma persona comenta otra vez antes de 10 segundos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios -- largo y espera (U-9) otra persona no queda bloqueada por la espera de alguien mas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/comentarios -- largo y espera (U-9) un comentario rechazado (404) no inicia la espera",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/contenidos.integration.test.js",
+      "estado": "passed",
+      "pruebas": 50,
+      "pasadas": 50,
+      "falladas": 0,
+      "duracion_ms": 9814,
+      "nombres": [
+        {
+          "titulo": "GET /api/contenidos devuelve la lista",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos la lista y el detalle publicos devuelven ia_herramientas (tambien en contenido premium bloqueado)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos filtra por seccion, categoria y tipoFormato combinados",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos filtra por tipoFormato=audio y por subformato",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos la lista tambien oculta url_media de un video premium bloqueado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos filtra por subseccion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id 404 si no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id 200 con el contenido si existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id un contenido no-premium nunca esta bloqueado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id un contenido premium se trunca y oculta url_media sin sesion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id un contenido premium se trunca para un usuario regular (no premium)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id un contenido premium se ve completo para un usuario premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id un contenido premium se ve completo para un admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id un contenido de logica-humana con es_premium=false se ve completo para cualquiera",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id un contenido de logica-humana con es_premium=true SI se trunca para un usuario regular",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos/:id un contenido con es_premium=true se ve completo para un usuario premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 403 si el usuario no es admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 400 si el cuerpo es invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 400 si es video sin urlMedia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 201 al crear sin destacar (sin abrir transaccion)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 201 con destacado=true limpia el destacado anterior de la MISMA seccion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 201 persiste subformato, divulgacionIa y los campos de cita en el INSERT",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 201 persiste iaHerramientas (claves conocidas y nombre libre) en el INSERT",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 201 sin iaHerramientas guarda una lista vacia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 400 con 9 herramientas, <script> o divulgacionIa \"no\" junto a una lista con elementos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 400 al crear con iaHerramientas y sin divulgacionIa (se asume \"no\")",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 201 con tipoFormato \"audio\" y urlMedia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/contenidos 201 con tipoFormato \"foto\" sin urlMedia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/contenidos/:id 404 si no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/contenidos/:id 200 al editar un contenido existente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/contenidos/:id PUT parcial que solo cambia subformato no toca los demas campos nuevos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/contenidos/:id PUT sin iaHerramientas conserva las guardadas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/contenidos/:id PUT con iaHerramientas las normaliza y las guarda",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/contenidos/:id 400 si iaHerramientas llega sin divulgacionIa y la pieza tiene divulgacion \"no\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/contenidos/:id PUT que cambia la divulgacion a \"no\" vacia las herramientas guardadas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/contenidos/:id 403 si el usuario no es admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/contenidos/:id 404 si el contenido no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/contenidos/:id borra en una sola sentencia el contenido, sus comentarios y sus traducciones (T-4)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/contenidos/:id 200 al eliminar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos?lang= (Fase C2) con ?lang=en superpone la traduccion y marca lo que no tiene",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos?lang= (Fase C2) el muro premium recorta el texto YA traducido, no el original",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos?lang= (Fase C2) una pieza escrita en ingles se muestra tal cual con ?lang=en",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/contenidos?lang= (Fase C2) el detalle acepta ?lang=en",
+          "estado": "passed"
+        },
+        {
+          "titulo": "borrador / AL AIRE (publicado) el publico solo ve publicados; el admin ve tambien los borradores",
+          "estado": "passed"
+        },
+        {
+          "titulo": "borrador / AL AIRE (publicado) el detalle de un borrador es 404 para el publico y 200 para el admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "borrador / AL AIRE (publicado) POST con publicado=false guarda el borrador sin destacar (aunque pidan destacado)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "borrador / AL AIRE (publicado) POST sin publicado queda publicado (AL AIRE)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "borrador / AL AIRE (publicado) PUT puede pasar un contenido a borrador y le quita el destacado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "borrador / AL AIRE (publicado) 400 si publicado no es booleano",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/foro.integration.test.js",
+      "estado": "passed",
+      "pruebas": 59,
+      "pasadas": 59,
+      "falladas": 0,
+      "duracion_ms": 9700,
+      "nombres": [
+        {
+          "titulo": "GET /api/foro/posts 400 si falta el parametro subseccion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/foro/posts devuelve la lista de publicaciones de una subseccion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 400 si el cuerpo es invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 201 al crear una publicacion valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 400 si un usuario regular supera las 200 palabras",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 201 si un usuario regular publica hasta 200 palabras",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 201 si un premium publica hasta 1000 palabras con enlace multimedia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 400 si el campo honeypot viene lleno (bot)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 403 si la cuenta tiene menos de 1 hora de creada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 403 si no ha confirmado ser mayor de edad en corrupcion-humana",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 201 en nuevos-humanos sin confirmar edad (no la exige)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 403 en corrupcion-humana si la fecha de nacimiento real dice que es menor, aunque haya marcado el checkbox",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 403 en corrupcion-humana si es adulto por fecha de nacimiento pero no marco el checkbox (la fecha no reemplaza el consentimiento)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts 201 en educacion sin confirmar edad (audiencia general, sin gate)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts -- Cloudflare Turnstile 201 sin TURNSTILE_SECRET_KEY configurado (no bloquea en dev/tests)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts -- Cloudflare Turnstile 400 si esta configurado y no llega token",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts -- Cloudflare Turnstile 400 si Cloudflare rechaza el token",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts -- Cloudflare Turnstile 201 si Cloudflare acepta el token",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id (permisos) 404 si la publicacion no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id (permisos) 403 si el usuario no es el autor ni admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id (permisos) 200 si el usuario es el autor",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id (permisos) 200 si el usuario es admin aunque no sea el autor",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/foro/posts/:id (permisos) 403 si el usuario no es el autor ni admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/foro/posts/:id (permisos) 200 si el usuario es el autor",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/foro/posts/:id (permisos) 200 si el usuario es moderador aunque no sea el autor",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/foro/posts/:id 404 si la publicacion no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/foro/posts/:id 200 con la publicacion y sus comentarios",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/foro/comentarios/:id (permisos) 403 si el usuario no es el autor ni admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/foro/comentarios/:id (permisos) 200 si el usuario es el autor del comentario",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/foro/comentarios/:id (permisos) 200 si el usuario es moderador aunque no sea el autor",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts/:postId/comentarios 400 si el campo honeypot viene lleno (bot)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts/:postId/comentarios 403 si la cuenta tiene menos de 1 hora de creada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts/:postId/comentarios 403 si no ha confirmado ser mayor de edad en un post de corrupcion-humana",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts/:postId/comentarios 201 al comentar en nuevos-humanos sin confirmar edad (no la exige)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts/:postId/comentarios 201 al comentar en educacion sin confirmar edad (audiencia general, sin gate)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts/:postId/comentarios 404 si la publicacion no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts/:postId/comentarios 400 si el comentario es muy corto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/foro/posts/:postId/comentarios 201 al comentar una publicacion existente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- verificaciones de la creacion 403 si quien edita no confirmo su edad y la sub-seccion es 18+ (U-4)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- verificaciones de la creacion 403 si la fecha de nacimiento real dice que es menor, aunque haya marcado el checkbox (U-4)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- verificaciones de la creacion 200 en una sub-seccion de audiencia general sin confirmar edad (U-4)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- verificaciones de la creacion 400 si se intenta cambiar la sub-seccion (U-4)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- verificaciones de la creacion si no se manda subseccion se conserva la guardada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- destacado y tema solo del admin moderador conserva destacado y tema guardados aunque los mande",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- destacado y tema solo del admin autor conserva destacado y tema guardados aunque los mande",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- destacado y tema solo del admin el admin si puede cambiarlos (y el contenido nuevo debe existir)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- destacado y tema solo del admin el admin que no manda destacado ni tema no los borra",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- destacado y tema solo del admin 400 si el admin enlaza un contenido que no existe al editar (C-2)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- destacado y tema solo del admin 400 si el admin crea una publicacion con un contenido relacionado que no existe (C-2)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- destacado y tema solo del admin 201 si el contenido relacionado existe (C-2)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- corregir un typo sin el rol de antes (U-2) 200 si el enlace no cambio aunque ya no sea premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- corregir un typo sin el rol de antes (U-2) 400 si cambia el enlace y ya no es premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- corregir un typo sin el rol de antes (U-2) un moderador puede editar sin tocar el enlace de la persona premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- corregir un typo sin el rol de antes (U-2) el limite de palabras no baja de lo ya guardado (typo en un texto largo)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PATCH /api/foro/posts/:id -- corregir un typo sin el rol de antes (U-2) 400 si el texto editado crece por encima de lo guardado y del limite",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Reportes al eliminar contenido del debate (R-2) y largo de comentarios (U-7) borrar una publicacion cierra en la misma sentencia los reportes pendientes de ella y de sus comentarios",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Reportes al eliminar contenido del debate (R-2) y largo de comentarios (U-7) borrar un comentario cierra en la misma sentencia sus reportes pendientes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "Reportes al eliminar contenido del debate (R-2) y largo de comentarios (U-7) 400 si el comentario del debate supera 2000 caracteres",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/fuentes.integration.test.js",
+      "estado": "passed",
+      "pruebas": 7,
+      "pasadas": 7,
+      "falladas": 0,
+      "duracion_ms": 9126,
+      "nombres": [
+        {
+          "titulo": "otras fuentes en contenidos al crear, se guardan limpias (sin espacios ni enlaces repetidos) como JSON en el último parámetro",
+          "estado": "passed"
+        },
+        {
+          "titulo": "otras fuentes en contenidos sin «fuentes» al crear se guarda una lista vacía",
+          "estado": "passed"
+        },
+        {
+          "titulo": "otras fuentes en contenidos 400 con más de 4 fuentes, sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "otras fuentes en contenidos 400 con una fuente sin nombre, sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "otras fuentes en contenidos 400 con un enlace que no es http(s), sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "otras fuentes en contenidos 400 con algo que no es una lista, sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "otras fuentes en contenidos al editar sin «fuentes» se conservan las que ya tenía, y con «fuentes» se reemplazan",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/newsletter.integration.test.js",
+      "estado": "passed",
+      "pruebas": 5,
+      "pasadas": 5,
+      "falladas": 0,
+      "duracion_ms": 9140,
+      "nombres": [
+        {
+          "titulo": "POST /api/newsletter/subscribe 400 con correo invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/newsletter/subscribe 503 si BEEHIIV_API_KEY o BEEHIIV_PUBLICATION_ID no estan configurados",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/newsletter/subscribe 200 y llama a la API de beehiiv con la llave en el header, nunca en el body visible al cliente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/newsletter/subscribe 400 con el mensaje de beehiiv cuando el correo ya esta suscrito",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/newsletter/subscribe 500 generico (no filtra el error real) si beehiiv no responde",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/ordenes.integration.test.js",
+      "estado": "passed",
+      "pruebas": 2,
+      "pasadas": 2,
+      "falladas": 0,
+      "duracion_ms": 1378,
+      "nombres": [
+        {
+          "titulo": "GET /api/ordenes 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/ordenes 200 devuelve solo los pedidos del usuario autenticado",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/perfil.integration.test.js",
+      "estado": "passed",
+      "pruebas": 18,
+      "pasadas": 18,
+      "falladas": 0,
+      "duracion_ms": 9474,
+      "nombres": [
+        {
+          "titulo": "PUT /api/perfil 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil 400 si el nombre es demasiado largo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil 200 actualiza el nombre del usuario autenticado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/perfil un usuario no puede editar el perfil de otro (usa siempre req.user.id)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/confirmar-edad 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/confirmar-edad 200 confirma la edad del usuario autenticado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/confirmar-terminos-logica-humana 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/confirmar-terminos-logica-humana 200 confirma los terminos del usuario autenticado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) 400 sin cuerpo, sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) 400 formato incorrecto, sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) 400 fecha inexistente, sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) 400 en el futuro, sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) 400 no plausible, sin tocar la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) 200 guarda la fecha cuando el perfil no tenia una",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) 409 si el perfil ya tenia fecha (no se puede cambiar)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) un menor tambien puede completar su perfil (no se rechaza por edad)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/perfil/fecha-nacimiento (Completa tu perfil) un fallo inesperado de la base da un 500 generico",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/productos.integration.test.js",
+      "estado": "passed",
+      "pruebas": 13,
+      "pasadas": 13,
+      "falladas": 0,
+      "duracion_ms": 9156,
+      "nombres": [
+        {
+          "titulo": "GET /api/productos devuelve la lista de productos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/productos/:id 404 si no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/productos 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/productos 403 si el usuario no es admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/productos 400 si el precio es invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/productos 201 al crear un producto valido como admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/productos/:id 404 si el producto no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "PUT /api/productos/:id 200 al editar un producto existente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/productos/:id 404 si no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/productos/:id borra en una sola sentencia el producto y sus traducciones (T-4)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "DELETE /api/productos/:id 200 al eliminar un producto existente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/productos?lang= (Fase C2) traduce nombre y descripcion pero deja precio y enlaces intactos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/productos?lang= (Fase C2) sin ?lang= no cambia el comportamiento anterior",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/reportes.integration.test.js",
+      "estado": "passed",
+      "pruebas": 7,
+      "pasadas": 7,
+      "falladas": 0,
+      "duracion_ms": 9051,
+      "nombres": [
+        {
+          "titulo": "POST /api/reportes 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/reportes 400 si el body es invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/reportes 404 si el elemento reportado no existe",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/reportes 201 al reportar un post existente (no exige edad_confirmada)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/reportes 201 al reportar un comentario existente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/reportes -- comentarios de articulos y duplicados (Fase 6) 201 al reportar un comentario de noticia o contenido (articulo_comentario)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/reportes -- comentarios de articulos y duplicados (Fase 6) 409 si esa persona ya tiene un reporte pendiente del mismo elemento",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/stripe.test.js",
+      "estado": "passed",
+      "pruebas": 18,
+      "pasadas": 18,
+      "falladas": 0,
+      "duracion_ms": 9509,
+      "nombres": [
+        {
+          "titulo": "POST /api/stripe/create-checkout-session 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session 500 si no hay STRIPE_PREMIUM_PRICE_ID configurado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session crea la sesion con customer_email si el perfil no tiene stripe_customer_id",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session reutiliza stripe_customer_id existente en vez de customer_email",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session con cantidad escogida 400 con cantidad no válida 0.5",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session con cantidad escogida 400 con cantidad no válida 0",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session con cantidad escogida 400 con cantidad no válida -3",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session con cantidad escogida 400 con cantidad no válida 501",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session con cantidad escogida 400 con cantidad no válida \"10\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session con cantidad escogida 400 con cantidad no válida null",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session con cantidad escogida con cantidad válida crea un precio mensual de esa cantidad sin necesitar el precio fijo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session con cantidad escogida el mínimo de $1 se acepta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session-tienda 401 sin autenticacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session-tienda 400 si el carrito esta vacio",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session-tienda 400 si un producto no tiene stripe_price_id configurado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session-tienda 400 si un producto no esta disponible",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session-tienda 200 crea la sesion con multiples line_items usando los precios de la base de datos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/create-checkout-session-tienda nunca confia en el precio/cantidad que manda el cliente, solo el id",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/stripeWebhook.test.js",
+      "estado": "passed",
+      "pruebas": 14,
+      "pasadas": 14,
+      "falladas": 0,
+      "duracion_ms": 9134,
+      "nombres": [
+        {
+          "titulo": "POST /api/stripe/webhook 400 si la firma es invalida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook checkout.session.completed actualiza el perfil a premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook checkout.session.async_payment_succeeded actualiza el perfil a premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook checkout.session.completed no actualiza el perfil si el pago aun no esta confirmado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook checkout.session.completed (compra de Tienda) registra el pedido con direcciones en ordenes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook checkout.session.completed (compra de Tienda) guarda direcciones null si Stripe no las envia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook checkout.session.completed no registra pedido de Tienda si el pago no esta confirmado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook customer.subscription.deleted regresa el rol a usuario",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook evento no manejado responde 200 sin tocar la base de datos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook Verificador de Confianza invoice.paid de un mes de apoyo da 3 usos (con stripe_ref para no repetirlos)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook Verificador de Confianza invoice.paid sin pago o de otra razón no da usos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook Verificador de Confianza si el perfil aún no tiene cliente de Stripe, responde error para que Stripe reintente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook Verificador de Confianza apoyo único por enlace de pago: 1 uso, solo si el enlace es el configurado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/stripe/webhook Verificador de Confianza al cancelar el apoyo mensual empieza la gracia (fecha de fin)",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/routes/verificador.integration.test.js",
+      "estado": "passed",
+      "pruebas": 16,
+      "pasadas": 16,
+      "falladas": 0,
+      "duracion_ms": 9396,
+      "nombres": [
+        {
+          "titulo": "POST /api/verificador 401 sin sesión",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador 400 si no envía nada y no toca la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador 400 si la nota pasa de 200 palabras o un archivo no es seguro",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador acepta un cuerpo grande (archivos) sin el límite normal de 100 KB",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador 402 si no tiene usos y no llama a la IA",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador 200: gasta un uso, guarda el reporte y NO muestra costos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador si la IA falla, devuelve el uso y responde 502",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador 402 si otro pedido gastó el último uso a la vez",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador el administrador prueba sin gastar usos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "búsqueda parecida a una anterior 409: avisa del reporte anterior, no gasta usos ni llama a la IA",
+          "estado": "passed"
+        },
+        {
+          "titulo": "búsqueda parecida a una anterior si la persona confirma (continuar: true), sigue y gasta el uso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/verificador/saldo y /reportes saldo: cuenta solo los usos vigentes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "GET /api/verificador/saldo y /reportes reportes: requiere sesión y solo lee los de la persona",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador/entender (The Oracle) 401 sin sesión; 400 si no envía nada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador/entender (The Oracle) 200: devuelve lo que entendió, NO gasta usos, NO muestra costos y registra el gasto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "POST /api/verificador/entender (The Oracle) si la IA falla, 502 con mensaje amable (la pantalla sigue sin bloquearse)",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/services/articleExtractor.test.js",
+      "estado": "passed",
+      "pruebas": 4,
+      "pasadas": 4,
+      "falladas": 0,
+      "duracion_ms": 247,
+      "nombres": [
+        {
+          "titulo": "isPrivateIp detecta direcciones privadas/internas comunes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "isPrivateIp no marca direcciones publicas como privadas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "assertUrlEsSegura rechaza protocolos que no son http/https",
+          "estado": "passed"
+        },
+        {
+          "titulo": "assertUrlEsSegura rechaza una URL malformada",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/services/cazadora.test.js",
+      "estado": "passed",
+      "pruebas": 16,
+      "pasadas": 16,
+      "falladas": 0,
+      "duracion_ms": 385,
+      "nombres": [
+        {
+          "titulo": "citaEstaEnPagina acepta una cita que aparece tal cual, aunque cambien mayúsculas, tildes, comillas o espacios",
+          "estado": "passed"
+        },
+        {
+          "titulo": "citaEstaEnPagina rechaza una cita inventada, una parafraseada y una demasiado corta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "urlsDeBusqueda y normalizarUrl toma solo las URLs que la búsqueda web devolvió, normalizadas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "urlsDeBusqueda y normalizarUrl es la misma página aunque cambie http/https, www, la barra final o el #",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarEcos (las tres pruebas) conserva el eco real: la URL salió de la búsqueda, la página se lee y la cita aparece",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarEcos (las tres pruebas) descarta una URL que la búsqueda nunca devolvió (el modelo la inventó)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarEcos (las tres pruebas) descarta una cita que NO está en la página, aunque la URL sea real",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarEcos (las tres pruebas) descarta si la página no se puede leer (bloqueada, caída o dirección no permitida)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarEcos (las tres pruebas) descarta datos incompletos, relaciones inventadas, citas cortas y fuentes repetidas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarEcos (las tres pruebas) si la búsqueda no devolvió ninguna URL conocida, igual exige descargar y encontrar la cita",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarEcos (las tres pruebas) revisa como máximo 8 candidatos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "construirPrompt pide fuentes reales de la búsqueda, citas copiadas tal cual, no inventar y tratar la idea como material",
+          "estado": "passed"
+        },
+        {
+          "titulo": "calcularCosto suma tokens (precios de Sonnet) y cada búsqueda web",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cazarEcos (de punta a punta, con la API y la descarga simuladas) sin ANTHROPIC_API_KEY falla con un mensaje claro",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cazarEcos (de punta a punta, con la API y la descarga simuladas) usa Sonnet con la búsqueda web, verifica y cuenta lo descartado y las búsquedas",
+          "estado": "passed"
+        },
+        {
+          "titulo": "cazarEcos (de punta a punta, con la API y la descarga simuladas) si Claude no entrega los hallazgos, pide intentar de nuevo",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/services/oracleEntender.test.js",
+      "estado": "passed",
+      "pruebas": 3,
+      "pasadas": 3,
+      "falladas": 0,
+      "duracion_ms": 199,
+      "nombres": [
+        {
+          "titulo": "oracleEntender el prompt trata lo enviado como datos y no incluye archivos, solo los cuenta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "oracleEntender normaliza la respuesta: tipo desconocido pasa a «otra», limita y limpia los datos que faltan",
+          "estado": "passed"
+        },
+        {
+          "titulo": "oracleEntender un pedido de verificar una oferta se reconoce",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/services/verificador.test.js",
+      "estado": "passed",
+      "pruebas": 18,
+      "pasadas": 18,
+      "falladas": 0,
+      "duracion_ms": 382,
+      "nombres": [
+        {
+          "titulo": "verificadorCreditos apoyo mensual activo: los usos se acumulan hasta 12 meses y luego vencen",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificadorCreditos si deja de apoyar: 15 días de gracia y luego se pierden",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificadorCreditos apoyo único: 1 uso que no depende del apoyo mensual",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificadorCreditos se gasta primero lo que vence antes y no se elige una concesión agotada",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificadorCreditos sumarMeses respeta fines de mes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "vocabularioSeguro quita la afirmación absoluta: Es 100% seguro comprar aquí.",
+          "estado": "passed"
+        },
+        {
+          "titulo": "vocabularioSeguro quita la afirmación absoluta: Te garantizo que es legítimo.",
+          "estado": "passed"
+        },
+        {
+          "titulo": "vocabularioSeguro quita la afirmación absoluta: Esto es una estafa.",
+          "estado": "passed"
+        },
+        {
+          "titulo": "vocabularioSeguro quita la afirmación absoluta: Compra sin riesgo.",
+          "estado": "passed"
+        },
+        {
+          "titulo": "vocabularioSeguro quita la afirmación absoluta: Está comprobado que funciona.",
+          "estado": "passed"
+        },
+        {
+          "titulo": "vocabularioSeguro un texto prudente no se toca",
+          "estado": "passed"
+        },
+        {
+          "titulo": "vocabularioSeguro limpia objetos y listas completos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarOferta (sin gastar dinero: Claude simulado) descarta fuentes que la búsqueda no devolvió, suaviza el vocabulario y agrega el aviso",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarOferta (sin gastar dinero: Claude simulado) nivel desconocido pasa a información insuficiente y se avisa si pasó del tope de costo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarOferta (sin gastar dinero: Claude simulado) normalizarReporte limita listas y tolera basura",
+          "estado": "passed"
+        },
+        {
+          "titulo": "verificarOferta (sin gastar dinero: Claude simulado) el costo de un reporte típico queda por debajo del tope de $0.25",
+          "estado": "passed"
+        },
+        {
+          "titulo": "perfil profesional del Verificador las instrucciones incluyen oficios, casos iniciales y límites legales",
+          "estado": "passed"
+        },
+        {
+          "titulo": "perfil profesional del Verificador el aviso del reporte aclara que no es asesoría legal",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/util/autorVisible.test.js",
+      "estado": "passed",
+      "pruebas": 2,
+      "pasadas": 2,
+      "falladas": 0,
+      "duracion_ms": 192,
+      "nombres": [
+        {
+          "titulo": "nombreVisibleSql usa el nombre del perfil y, si no hay, un alias generico derivado del id",
+          "estado": "passed"
+        },
+        {
+          "titulo": "nombreVisibleSql nunca incluye el correo y respeta el alias de tabla pedido",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/util/edad.test.js",
+      "estado": "passed",
+      "pruebas": 9,
+      "pasadas": 9,
+      "falladas": 0,
+      "duracion_ms": 151,
+      "nombres": [
+        {
+          "titulo": "calcularEdad null si no hay fecha",
+          "estado": "passed"
+        },
+        {
+          "titulo": "calcularEdad null si la fecha es invalida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "calcularEdad calcula la edad correcta cuando ya paso el cumpleanos este ano",
+          "estado": "passed"
+        },
+        {
+          "titulo": "calcularEdad resta 1 si el cumpleanos todavia no ha pasado este ano",
+          "estado": "passed"
+        },
+        {
+          "titulo": "esMenorConocido true si la fecha real dice que es menor del limite",
+          "estado": "passed"
+        },
+        {
+          "titulo": "esMenorConocido false si la fecha real dice que ya cumplio el limite",
+          "estado": "passed"
+        },
+        {
+          "titulo": "esMenorConocido false (no true) cuando no se conoce la fecha -- no reemplaza el checkbox, solo lo refuerza",
+          "estado": "passed"
+        },
+        {
+          "titulo": "esMenorConocido true justo un dia antes del cumpleanos 18",
+          "estado": "passed"
+        },
+        {
+          "titulo": "esMenorConocido false el mismo dia del cumpleanos 18",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/util/slugify.test.js",
+      "estado": "passed",
+      "pruebas": 5,
+      "pasadas": 5,
+      "falladas": 0,
+      "duracion_ms": 190,
+      "nombres": [
+        {
+          "titulo": "slugify convierte a minusculas y reemplaza espacios por guiones",
+          "estado": "passed"
+        },
+        {
+          "titulo": "slugify quita acentos y signos de puntuacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "slugify colapsa guiones repetidos y recorta los de los extremos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "slugify trunca a 80 caracteres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "slugify acepta numeros",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/util/traducciones.test.js",
+      "estado": "passed",
+      "pruebas": 8,
+      "pasadas": 8,
+      "falladas": 0,
+      "duracion_ms": 215,
+      "nombres": [
+        {
+          "titulo": "normalizarLang / idiomaOriginalDe solo acepta es/en; el idioma original por defecto es espanol",
+          "estado": "passed"
+        },
+        {
+          "titulo": "mezclar superpone solo campos permitidos y con contenido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "aplicarTraducciones sin lang valido devuelve las filas intactas y no consulta la base",
+          "estado": "passed"
+        },
+        {
+          "titulo": "aplicarTraducciones en el idioma original no consulta y marca sin_traduccion=false",
+          "estado": "passed"
+        },
+        {
+          "titulo": "aplicarTraducciones superpone la traduccion existente y marca la que falta",
+          "estado": "passed"
+        },
+        {
+          "titulo": "aplicarTraducciones una pieza escrita en ingles se muestra tal cual en ingles y busca traduccion al espanol",
+          "estado": "passed"
+        },
+        {
+          "titulo": "aplicarTraducciones si la consulta falla (migracion sin aplicar) degrada al original sin romper",
+          "estado": "passed"
+        },
+        {
+          "titulo": "aplicarTraducciones lista vacia no consulta",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/util/usoIa.test.js",
+      "estado": "passed",
+      "pruebas": 5,
+      "pasadas": 5,
+      "falladas": 0,
+      "duracion_ms": 247,
+      "nombres": [
+        {
+          "titulo": "registrarUsoAgente guarda una fila con el nombre de la agente, la fuente, los tokens y el costo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "registrarUsoAgente un uso sin datos guarda ceros, no vacíos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "registrarUsoAgente un agente o una fuente que la base no admite no se intenta guardar (así no rompe el CHECK)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "registrarUsoAgente si la base falla, no tumba la respuesta: solo lo anota en el registro del servidor",
+          "estado": "passed"
+        },
+        {
+          "titulo": "la lista de agentes coincide con la base de datos migración y schema.sql permiten exactamente los mismos nombres que usa el código",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/agradecimiento.test.js",
+      "estado": "passed",
+      "pruebas": 16,
+      "pasadas": 16,
+      "falladas": 0,
+      "duracion_ms": 290,
+      "nombres": [
+        {
+          "titulo": "validateNombreAgradecimiento acepta \"Ana\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento acepta \"María José\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento acepta \"O'Brien\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento acepta \"Jean-Luc\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento acepta \"Ana M.\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento acepta \"José Ñandú 2\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento acepta \"李小龍\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento rechaza lo que no es texto, vacío o demasiado corto/largo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento rechaza \"<script>alert(1)</script>\" (símbolos, HTML, correos o enlaces)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento rechaza \"Ana <b>\" (símbolos, HTML, correos o enlaces)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento rechaza \"ana@correo.com\" (símbolos, HTML, correos o enlaces)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento rechaza \"visita http://x.com\" (símbolos, HTML, correos o enlaces)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento rechaza \"www.sitio.com\" (símbolos, HTML, correos o enlaces)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento rechaza \"Ana & Co\" (símbolos, HTML, correos o enlaces)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNombreAgradecimiento rechaza \"Ana;DROP\" (símbolos, HTML, correos o enlaces)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "limpiarNombre quita espacios de sobra",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/comentario.test.js",
+      "estado": "passed",
+      "pruebas": 7,
+      "pasadas": 7,
+      "falladas": 0,
+      "duracion_ms": 238,
+      "nombres": [
+        {
+          "titulo": "validateComentario acepta un comentario valido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateComentario acepta tipo \"noticia\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateComentario rechaza tipo invalido o ausente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateComentario rechaza itemId vacio o ausente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateComentario rechaza cuerpo muy corto o ausente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateComentario -- largo maximo rechaza mas de 2000 caracteres y acepta exactamente 2000",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateComentario -- largo maximo un cuerpo que no es texto da error en vez de romper",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/contenido.test.js",
+      "estado": "passed",
+      "pruebas": 37,
+      "pasadas": 37,
+      "falladas": 0,
+      "duracion_ms": 320,
+      "nombres": [
+        {
+          "titulo": "validateContenido acepta un contenido completo y valido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido exige los campos obligatorios al crear (no parcial)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido no exige nada en modo parcial",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza seccion no valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta seccion \"noticias\" (Noticias combina noticias + contenidos)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta categoria \"ciencia\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta categoria \"crimen\" y ya no reconoce \"crimenes\" (plural, retirada)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta las categorias especificas de Educacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza tipoFormato no valido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza categoria no valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza titulo muy corto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza resumen muy corto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza fecha invalida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza duracionMin no entero o no positivo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta destacado booleano y rechaza otros tipos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido exige urlMedia cuando tipoFormato es video (no parcial)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta video con urlMedia presente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza esquemas peligrosos en urlMedia (se pinta como iframe en una pagina publica)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido no exige urlMedia para video en modo parcial",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta tipoFormato \"audio\" y \"foto\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido exige urlMedia cuando tipoFormato es audio (no parcial)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido no exige urlMedia para foto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta subformato valido, ausente, y rechaza invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta los 3 niveles de divulgacionIa y rechaza invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta cada uno de los 10 estilos de cita y rechaza invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta citaSinFuenteExterna booleano y rechaza otros tipos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido rechaza citaFechaAcceso invalida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido un contenido sin ningun campo de cita sigue siendo valido (todo opcional)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta cada una de las 4 subsecciones, subseccion ausente, y rechaza invalida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta enfoque de region, ausente, y rechaza invalido (incluye institucional/individual, eliminados 2026-09-27)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido acepta esPremium booleano y rechaza otros tipos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido iaHerramientas acepta claves conocidas y nombres libres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido iaHerramientas es opcional y se puede mandar vacio con cualquier divulgacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido iaHerramientas rechaza 9 elementos, duplicados, <script> y URLs",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido iaHerramientas rechaza elementos con divulgacionIa \"no\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido iaHerramientas en edicion parcial, omitido no da errores",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateContenido idiomaOriginal (Fase C2) acepta es y en, y rechaza cualquier otro valor",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/fechaNacimiento.test.js",
+      "estado": "passed",
+      "pruebas": 22,
+      "pasadas": 22,
+      "falladas": 0,
+      "duracion_ms": 201,
+      "nombres": [
+        {
+          "titulo": "validateFechaNacimiento acepta 1990-05-17",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento acepta 2008-10-02",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento acepta 2026-10-02",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento acepta 1950-02-28",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento acepta 2000-02-29",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento no rechaza por edad: un menor de 13 tambien es una fecha valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el formato undefined",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el formato null",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el formato 123",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el formato \"\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el formato \"17/05/1990\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el formato \"1990-5-17\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el formato \"19900517\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el formato \"1990-05-17T00:00:00Z\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza un cuerpo ausente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza la fecha que no existe 2026-02-30",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza la fecha que no existe 2025-02-29",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza la fecha que no existe 1990-13-01",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza la fecha que no existe 1990-00-10",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza la fecha que no existe 1990-04-31",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza el futuro (manana) pero acepta hoy",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateFechaNacimiento rechaza fechas no plausibles (mas de 120 anos)",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/foroPost.test.js",
+      "estado": "passed",
+      "pruebas": 22,
+      "pasadas": 22,
+      "falladas": 0,
+      "duracion_ms": 296,
+      "nombres": [
+        {
+          "titulo": "validatePost acepta un post valido sin errores",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza titulo muy corto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza titulo ausente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza titulo mayor a 140 caracteres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza cuerpo muy corto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza subseccion ausente o no reconocida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost acepta enfoque de region y rechaza invalido (incluye institucional/individual, eliminados 2026-09-27)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost acepta la subseccion nuevos-humanos y sus regiones de enfoque",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost acepta la subseccion educacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost acumula varios errores a la vez",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost acepta hasta 200 palabras para un usuario regular",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza mas de 200 palabras para un usuario regular",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost permite hasta 1000 palabras para premium y admin",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza mas de 1000 palabras para premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost usa el limite de usuario regular si no se especifica rol",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza enlace multimedia de un usuario regular",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost acepta enlace multimedia valido de un usuario premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza enlace multimedia sin tipo o con URL invalida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost rechaza esquemas peligrosos (javascript:, data:) en el enlace multimedia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost al editar (publicacion existente) el limite de palabras no baja de lo ya guardado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost al editar (publicacion existente) un enlace sin cambios no vuelve a exigir premium",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePost al editar (publicacion existente) un enlace distinto si lo exige",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/fuentes.test.js",
+      "estado": "passed",
+      "pruebas": 13,
+      "pasadas": 13,
+      "falladas": 0,
+      "duracion_ms": 218,
+      "nombres": [
+        {
+          "titulo": "validarFuentes lo omitido y una lista válida (con o sin enlace) no tienen errores",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarFuentes rechaza no es una lista",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarFuentes rechaza más de 4 fuentes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarFuentes rechaza un elemento que no es objeto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarFuentes rechaza sin nombre",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarFuentes rechaza nombre larguísimo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarFuentes rechaza enlace con otro esquema",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarFuentes rechaza enlace que no es texto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarFuentes rechaza enlace sin formato de URL",
+          "estado": "passed"
+        },
+        {
+          "titulo": "normalizarFuentes y resolverFuentes deja solo nombre y enlace, sin espacios sobrantes y sin repetir el mismo enlace (o el mismo nombre sin enlace)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "normalizarFuentes y resolverFuentes omitido conserva lo que había (o vacío); enviado reemplaza, incluso por una lista vacía",
+          "estado": "passed"
+        },
+        {
+          "titulo": "limpiarUrlsExtra acepta textos u objetos con url, omite los que no tienen enlace y quita repetidos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "limpiarUrlsExtra rechaza lo que no es una lista, más de 4 y enlaces que no son http(s)",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/iaHerramientas.test.js",
+      "estado": "passed",
+      "pruebas": 21,
+      "pasadas": 21,
+      "falladas": 0,
+      "duracion_ms": 288,
+      "nombres": [
+        {
+          "titulo": "esquema SQL schema.sql y la migracion crean la columna con el mismo limite que la validacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "CLAVES_IA_CONOCIDAS lista las cinco herramientas conocidas en minuscula",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas omitido es valido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas acepta claves conocidas y nombres libres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas acepta una lista vacia incluso con divulgacion \"no\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas rechaza lo que no sea una lista",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas acepta 8 elementos y rechaza 9",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas rechaza elementos que no son texto, vacios o de mas de 40 caracteres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas rechaza <, >, saltos de linea y URLs",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas rechaza duplicados sin distinguir mayusculas ni espacios",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas con divulgacion \"no\" y elementos, pide cambiar la divulgacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validarIaHerramientas sin divulgacion en el cuerpo no cruza (lo resuelve la ruta)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "normalizarIaHerramientas claves conocidas a minuscula, nombres libres conservan capitalizacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "normalizarIaHerramientas quita duplicados conservando el primero",
+          "estado": "passed"
+        },
+        {
+          "titulo": "resolverIaHerramientas omitido en edicion conserva lo guardado",
+          "estado": "passed"
+        },
+        {
+          "titulo": "resolverIaHerramientas omitido al crear es una lista vacia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "resolverIaHerramientas una fila vieja sin la columna se trata como lista vacia",
+          "estado": "passed"
+        },
+        {
+          "titulo": "resolverIaHerramientas normaliza la lista nueva",
+          "estado": "passed"
+        },
+        {
+          "titulo": "resolverIaHerramientas lista nueva contra una pieza con divulgacion \"no\" (sin cambiarla) da error",
+          "estado": "passed"
+        },
+        {
+          "titulo": "resolverIaHerramientas lista nueva que acompana un cambio de divulgacion a \"parcial\" es valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "resolverIaHerramientas cambiar la divulgacion a \"no\" sin lista nueva vacia la lista guardada",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/noticia.test.js",
+      "estado": "passed",
+      "pruebas": 23,
+      "pasadas": 23,
+      "falladas": 0,
+      "duracion_ms": 351,
+      "nombres": [
+        {
+          "titulo": "validateNoticia acepta una noticia completa y valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia exige todos los campos obligatorios al crear (no parcial)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia rechaza titulo muy corto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia rechaza fecha invalida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia acepta destacado booleano y rechaza otros tipos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia rechaza parrafos vacios",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia en modo parcial (edicion) no exige campos ausentes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia en modo parcial sigue validando los campos que si se envian",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia en modo parcial valida parrafos solo si se envian",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia acepta una categoria valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia rechaza una categoria invalida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia categoria es obligatoria al crear (ya no existe \"general\" por defecto)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia \"general\" ya no es una categoria valida",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia al editar (parcial) la categoria sigue siendo opcional",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia acepta los 3 niveles de divulgacionIa y rechaza invalido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia divulgacionIa es opcional (se asume \"no\")",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia acepta publicado booleano y rechaza otros tipos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia iaHerramientas acepta claves conocidas y nombres libres",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia iaHerramientas es opcional y se puede mandar vacio con cualquier divulgacion",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia iaHerramientas rechaza 9 elementos, duplicados, <script> y URLs",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia iaHerramientas rechaza elementos con divulgacionIa \"no\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia iaHerramientas en edicion parcial, omitido no da errores",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateNoticia idiomaOriginal (Fase C2) acepta es y en, y rechaza cualquier otro valor",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/perfil.test.js",
+      "estado": "passed",
+      "pruebas": 5,
+      "pasadas": 5,
+      "falladas": 0,
+      "duracion_ms": 198,
+      "nombres": [
+        {
+          "titulo": "validatePerfil acepta un cuerpo vacio (nombre es opcional)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePerfil acepta un nombre valido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePerfil acepta nombre null (para borrarlo)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePerfil rechaza nombre que no es texto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validatePerfil rechaza nombre de mas de 80 caracteres",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/producto.test.js",
+      "estado": "passed",
+      "pruebas": 9,
+      "pasadas": 9,
+      "falladas": 0,
+      "duracion_ms": 217,
+      "nombres": [
+        {
+          "titulo": "validateProducto acepta un producto completo y valido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateProducto exige todos los campos obligatorios al crear",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateProducto rechaza nombre muy corto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateProducto rechaza precio cero o negativo",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateProducto rechaza precio no numerico",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateProducto en modo parcial (edicion) no exige campos ausentes",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateProducto en modo parcial sigue validando los campos que si se envian",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateProducto acepta un stripePriceId valido y stripePriceId ausente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateProducto rechaza un stripePriceId que no empieza con \"price_\"",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/reporte.test.js",
+      "estado": "passed",
+      "pruebas": 5,
+      "pasadas": 5,
+      "falladas": 0,
+      "duracion_ms": 186,
+      "nombres": [
+        {
+          "titulo": "validateReporte acepta un reporte valido",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateReporte acepta tipo \"debate_comentario\"",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateReporte rechaza tipo invalido o ausente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateReporte rechaza itemId ausente",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateReporte rechaza motivo muy corto, ausente o muy largo",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/traduccion.test.js",
+      "estado": "passed",
+      "pruebas": 7,
+      "pasadas": 7,
+      "falladas": 0,
+      "duracion_ms": 240,
+      "nombres": [
+        {
+          "titulo": "validateTraduccion acepta una traduccion valida de noticia y la sanea",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateTraduccion acepta contenido y producto con sus campos propios",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateTraduccion rechaza tipo o idioma invalidos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateTraduccion rechaza campos no traducibles (precio, enlaces, ids)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateTraduccion rechaza campos que no son del tipo correcto",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateTraduccion respeta los limites de longitud",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateTraduccion rechaza una traduccion vacia o sin objeto",
+          "estado": "passed"
+        }
+      ]
+    },
+    {
+      "archivo": "src/validators/verificador.test.js",
+      "estado": "passed",
+      "pruebas": 8,
+      "pasadas": 8,
+      "falladas": 0,
+      "duracion_ms": 246,
+      "nombres": [
+        {
+          "titulo": "validateVerificar acepta texto, enlaces y archivos seguros",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateVerificar rechaza un archivo que dice ser PNG pero no lo es (no se confía en el tipo declarado)",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateVerificar rechaza tipos peligrosos o desconocidos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateVerificar la nota de preocupación admite hasta 200 palabras",
+          "estado": "passed"
+        },
+        {
+          "titulo": "validateVerificar exige algo que revisar, limita enlaces y archivos",
+          "estado": "passed"
+        },
+        {
+          "titulo": "búsqueda similar mismo enlace (aunque cambie www o la barra final) es similar",
+          "estado": "passed"
+        },
+        {
+          "titulo": "búsqueda similar texto casi igual es similar; texto distinto no",
+          "estado": "passed"
+        },
+        {
+          "titulo": "búsqueda similar textos muy cortos no se comparan",
+          "estado": "passed"
+        }
+      ]
+    }
+  ]
+}

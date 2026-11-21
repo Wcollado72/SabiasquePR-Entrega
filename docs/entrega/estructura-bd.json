@@ -1,0 +1,2507 @@
+{
+ "columnas": [
+  {
+   "t": "comentarios",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "comentarios",
+   "col": "tipo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "comentarios",
+   "col": "item_id",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "comentarios",
+   "col": "autor_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "comentarios",
+   "col": "cuerpo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "comentarios",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "comentarios",
+   "col": "oculto",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "contenidos",
+   "col": "id",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "seccion",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "tipo_formato",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "categoria",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'general'::text"
+  },
+  {
+   "t": "contenidos",
+   "col": "titulo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "subtitulo_resumen",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "cuerpo",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "autor",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "url_media",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "fuente_url",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "fuente_texto",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "duracion_min",
+   "tipo": "integer",
+   "nulo": "NO",
+   "def": "1"
+  },
+  {
+   "t": "contenidos",
+   "col": "url_portada",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "portada_alt",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "fecha_publicacion",
+   "tipo": "date",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "destacado",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "contenidos",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "contenidos",
+   "col": "subformato",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "divulgacion_ia",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'no'::text"
+  },
+  {
+   "t": "contenidos",
+   "col": "cita_estilo",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "cita_autor",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "cita_anio",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "cita_titulo_original",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "cita_fecha_acceso",
+   "tipo": "date",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "cita_sin_fuente_externa",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "contenidos",
+   "col": "subseccion",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "es_premium",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "contenidos",
+   "col": "enfoque",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "contenidos",
+   "col": "idioma_original",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'es'::text"
+  },
+  {
+   "t": "contenidos",
+   "col": "ia_herramientas",
+   "tipo": "ARRAY",
+   "nulo": "NO",
+   "def": "'{}'::text[]"
+  },
+  {
+   "t": "contenidos",
+   "col": "publicado",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "true"
+  },
+  {
+   "t": "contenidos",
+   "col": "fuentes",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": "'[]'::jsonb"
+  },
+  {
+   "t": "contenidos",
+   "col": "ultima_hora",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "contenidos",
+   "col": "actualizada",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "contenidos",
+   "col": "fijada",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "contenidos",
+   "col": "verificada",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "contenidos",
+   "col": "sensible",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "foro_comentarios",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "foro_comentarios",
+   "col": "post_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "foro_comentarios",
+   "col": "autor_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "foro_comentarios",
+   "col": "cuerpo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "foro_comentarios",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "foro_comentarios",
+   "col": "oculto",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "foro_posts",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "foro_posts",
+   "col": "autor_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "titulo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "cuerpo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "categoria",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'general'::text"
+  },
+  {
+   "t": "foro_posts",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "foro_posts",
+   "col": "editado_en",
+   "tipo": "timestamptz",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "subseccion",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "enfoque",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "tema_contenido_id",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "destacado",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "foro_posts",
+   "col": "enlace_media",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "enlace_media_tipo",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "foro_posts",
+   "col": "oculto",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "id",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "nombre",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "estado",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "costo_mensual_usd",
+   "tipo": "numeric(10,2)",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "fecha_renovacion",
+   "tipo": "date",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "enlace_facturacion",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "notas",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "gastos_servicios",
+   "col": "actualizado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "agente",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "fuente_tipo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "uso_busqueda_web",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "busquedas_realizadas",
+   "tipo": "integer",
+   "nulo": "NO",
+   "def": "0"
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "tokens_entrada",
+   "tipo": "integer",
+   "nulo": "NO",
+   "def": "0"
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "tokens_salida",
+   "tipo": "integer",
+   "nulo": "NO",
+   "def": "0"
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "costo_estimado_usd",
+   "tipo": "numeric(10,4)",
+   "nulo": "NO",
+   "def": "0"
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "creado_por",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "ia_generaciones",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "mensajes_contacto",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "mensajes_contacto",
+   "col": "nombre",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "mensajes_contacto",
+   "col": "email",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "mensajes_contacto",
+   "col": "motivo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "mensajes_contacto",
+   "col": "mensaje",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "mensajes_contacto",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "col": "restriccion_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "col": "usuario_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "col": "mensaje",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "col": "estado",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'pendiente'::text"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "col": "resuelto_en",
+   "tipo": "timestamptz",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "nivel",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "categoria",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "tipo_item",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "item_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "autor_id",
+   "tipo": "uuid",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "afectado_id",
+   "tipo": "uuid",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "posible_menor",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "estado",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'abierto'::text"
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "ocultado",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "moderacion_casos",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "moderacion_decisiones",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "moderacion_decisiones",
+   "col": "caso_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_decisiones",
+   "col": "decidido_por",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_decisiones",
+   "col": "decision",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_decisiones",
+   "col": "razon",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_decisiones",
+   "col": "cuentas",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": "'[]'::jsonb"
+  },
+  {
+   "t": "moderacion_decisiones",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "col": "caso_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_evidencias",
+   "col": "contenido",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_evidencias",
+   "col": "contexto",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": "'[]'::jsonb"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "col": "sha256",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_evidencias",
+   "col": "capturado_por",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'sistema'::text"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "col": "capturado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "col": "conservar_hasta",
+   "tipo": "timestamptz",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "caso_id",
+   "tipo": "uuid",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "categoria",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "numero_reporte",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "enviado_en",
+   "tipo": "timestamptz",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "estado",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'borrador'::text"
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "recibo_ruta",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "conservar_hasta",
+   "tipo": "timestamptz",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "notas",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "col": "usuario_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_restricciones",
+   "col": "tipo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_restricciones",
+   "col": "caso_id",
+   "tipo": "uuid",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_restricciones",
+   "col": "motivo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "moderacion_restricciones",
+   "col": "desde",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "col": "hasta",
+   "tipo": "timestamptz",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "moderacion_restricciones",
+   "col": "activa",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "true"
+  },
+  {
+   "t": "noticias",
+   "col": "id",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "titulo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "fecha",
+   "tipo": "date",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "fecha_display",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "imagen",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "imagen_alt",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "imagen_caption",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "clase",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "fuente_url",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "fuente_texto",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "noticias",
+   "col": "parrafos",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": "'[]'::jsonb"
+  },
+  {
+   "t": "noticias",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "noticias",
+   "col": "categoria",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'general'::text"
+  },
+  {
+   "t": "noticias",
+   "col": "destacado",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "noticias",
+   "col": "divulgacion_ia",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'no'::text"
+  },
+  {
+   "t": "noticias",
+   "col": "publicado",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "true"
+  },
+  {
+   "t": "noticias",
+   "col": "idioma_original",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'es'::text"
+  },
+  {
+   "t": "noticias",
+   "col": "ia_herramientas",
+   "tipo": "ARRAY",
+   "nulo": "NO",
+   "def": "'{}'::text[]"
+  },
+  {
+   "t": "noticias",
+   "col": "fuentes",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": "'[]'::jsonb"
+  },
+  {
+   "t": "ordenes",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "ordenes",
+   "col": "usuario_id",
+   "tipo": "uuid",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "ordenes",
+   "col": "items",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "ordenes",
+   "col": "total",
+   "tipo": "numeric(10,2)",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "ordenes",
+   "col": "stripe_session_id",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "ordenes",
+   "col": "estado",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'pendiente'::text"
+  },
+  {
+   "t": "ordenes",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "ordenes",
+   "col": "envio_nombre",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "ordenes",
+   "col": "envio_direccion",
+   "tipo": "jsonb",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "ordenes",
+   "col": "facturacion_direccion",
+   "tipo": "jsonb",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "email",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "rol",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'usuario'::text"
+  },
+  {
+   "t": "perfiles",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "perfiles",
+   "col": "stripe_customer_id",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "stripe_subscription_id",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "nombre",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "edad_confirmada",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "perfiles",
+   "col": "logica_humana_terminos_ok",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "perfiles",
+   "col": "fecha_nacimiento",
+   "tipo": "date",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "agradecimiento_nombre",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "agradecimiento_autorizado_en",
+   "tipo": "timestamptz",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "perfiles",
+   "col": "apoyo_mensual_termino_en",
+   "tipo": "timestamptz",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "productos",
+   "col": "id",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "productos",
+   "col": "nombre",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "productos",
+   "col": "descripcion",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "productos",
+   "col": "precio",
+   "tipo": "numeric(10,2)",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "productos",
+   "col": "imagen",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "productos",
+   "col": "imagen_alt",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "productos",
+   "col": "stripe_link",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "productos",
+   "col": "disponible",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "true"
+  },
+  {
+   "t": "productos",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "productos",
+   "col": "stripe_price_id",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "reportes",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "reportes",
+   "col": "tipo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "reportes",
+   "col": "item_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "reportes",
+   "col": "reportado_por",
+   "tipo": "uuid",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "reportes",
+   "col": "motivo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "reportes",
+   "col": "estado",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'pendiente'::text"
+  },
+  {
+   "t": "reportes",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "reportes",
+   "col": "automatico",
+   "tipo": "boolean",
+   "nulo": "NO",
+   "def": "false"
+  },
+  {
+   "t": "semillas",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "semillas",
+   "col": "autor_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "semillas",
+   "col": "titulo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "''::text"
+  },
+  {
+   "t": "semillas",
+   "col": "texto",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "semillas",
+   "col": "etiquetas",
+   "tipo": "ARRAY",
+   "nulo": "NO",
+   "def": "'{}'::text[]"
+  },
+  {
+   "t": "semillas",
+   "col": "estado",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": "'semilla'::text"
+  },
+  {
+   "t": "semillas",
+   "col": "analisis",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": "'{}'::jsonb"
+  },
+  {
+   "t": "semillas",
+   "col": "desarrollos",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": "'[]'::jsonb"
+  },
+  {
+   "t": "semillas",
+   "col": "contenido_id",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "semillas",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "semillas",
+   "col": "actualizado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "suscriptores",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "suscriptores",
+   "col": "email",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "suscriptores",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "traducciones",
+   "col": "tipo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "traducciones",
+   "col": "item_id",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "traducciones",
+   "col": "idioma",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "traducciones",
+   "col": "campos",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "traducciones",
+   "col": "actualizado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "traducciones",
+   "col": "actualizado_por",
+   "tipo": "uuid",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "verificador_concesiones",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "verificador_concesiones",
+   "col": "usuario_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "verificador_concesiones",
+   "col": "tipo",
+   "tipo": "text",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "verificador_concesiones",
+   "col": "cantidad",
+   "tipo": "integer",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "verificador_concesiones",
+   "col": "usados",
+   "tipo": "integer",
+   "nulo": "NO",
+   "def": "0"
+  },
+  {
+   "t": "verificador_concesiones",
+   "col": "otorgado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  },
+  {
+   "t": "verificador_concesiones",
+   "col": "stripe_ref",
+   "tipo": "text",
+   "nulo": "YES",
+   "def": null
+  },
+  {
+   "t": "verificador_reportes",
+   "col": "id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": "gen_random_uuid()"
+  },
+  {
+   "t": "verificador_reportes",
+   "col": "usuario_id",
+   "tipo": "uuid",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "verificador_reportes",
+   "col": "entrada",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": "'{}'::jsonb"
+  },
+  {
+   "t": "verificador_reportes",
+   "col": "resultado",
+   "tipo": "jsonb",
+   "nulo": "NO",
+   "def": null
+  },
+  {
+   "t": "verificador_reportes",
+   "col": "creado_en",
+   "tipo": "timestamptz",
+   "nulo": "NO",
+   "def": "now()"
+  }
+ ],
+ "restricciones": [
+  {
+   "t": "comentarios",
+   "tipo": "p",
+   "nombre": "comentarios_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "comentarios",
+   "tipo": "f",
+   "nombre": "comentarios_autor_id_fkey",
+   "def": "FOREIGN KEY (autor_id) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "comentarios",
+   "tipo": "c",
+   "nombre": "comentarios_tipo_check",
+   "def": "CHECK ((tipo = ANY (ARRAY['noticia'::text, 'contenido'::text])))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "p",
+   "nombre": "contenidos_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_categoria_check",
+   "def": "CHECK ((categoria = ANY (ARRAY['internacionales'::text, 'crimen'::text, 'salud'::text, 'deportes'::text, 'finanzas'::text, 'tecnologia'::text, 'descubrimientos'::text, 'politica'::text, 'clima'::text, 'cultura'::text, 'ciencia'::text, 'leyes-educativas'::text, 'estudiantes-sobresalientes'::text, 'sistemas-mundiales'::text, 'programas-educativos'::text])))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_cita_estilo_check",
+   "def": "CHECK (((cita_estilo IS NULL) OR (cita_estilo = ANY (ARRAY['apa'::text, 'mla'::text, 'chicago'::text, 'turabian'::text, 'ama'::text, 'vancouver'::text, 'abnt'::text, 'icontec'::text, 'ieee'::text, 'bluebook'::text]))))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_divulgacion_ia_check",
+   "def": "CHECK ((divulgacion_ia = ANY (ARRAY['no'::text, 'parcial'::text, 'generado'::text])))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_duracion_min_check",
+   "def": "CHECK ((duracion_min > 0))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_enfoque_check",
+   "def": "CHECK (((enfoque IS NULL) OR (enfoque = ANY (ARRAY['puerto-rico'::text, 'estados-unidos'::text, 'hispanoamerica'::text, 'internacionales'::text]))))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_ia_herramientas_max",
+   "def": "CHECK ((cardinality(ia_herramientas) <= 8))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_idioma_original_check",
+   "def": "CHECK ((idioma_original = ANY (ARRAY['es'::text, 'en'::text])))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_seccion_check",
+   "def": "CHECK ((seccion = ANY (ARRAY['revolucion-humana'::text, 'educacion'::text, 'noticias'::text, 'verificador'::text])))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_subformato_check",
+   "def": "CHECK (((subformato IS NULL) OR (subformato = ANY (ARRAY['podcast'::text, 'entrevista'::text, 'galeria'::text, 'opinion'::text, 'reportaje'::text, 'cronica'::text, 'guia'::text, 'infografia'::text, 'tutorial'::text, 'documental'::text, 'columna'::text]))))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_subseccion_check",
+   "def": "CHECK (((subseccion IS NULL) OR (subseccion = ANY (ARRAY['nuevos-humanos'::text, 'revolucion-mundial'::text, 'logica-humana'::text, 'corrupcion-humana'::text, 'ilogica-humana'::text]))))"
+  },
+  {
+   "t": "contenidos",
+   "tipo": "c",
+   "nombre": "contenidos_tipo_formato_check",
+   "def": "CHECK ((tipo_formato = ANY (ARRAY['video'::text, 'ensayo'::text, 'noticia'::text, 'lectura_corta'::text, 'audio'::text, 'foto'::text])))"
+  },
+  {
+   "t": "foro_comentarios",
+   "tipo": "p",
+   "nombre": "foro_comentarios_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "foro_comentarios",
+   "tipo": "f",
+   "nombre": "foro_comentarios_autor_id_fkey",
+   "def": "FOREIGN KEY (autor_id) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "foro_comentarios",
+   "tipo": "f",
+   "nombre": "foro_comentarios_post_id_fkey",
+   "def": "FOREIGN KEY (post_id) REFERENCES foro_posts(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "foro_posts",
+   "tipo": "p",
+   "nombre": "foro_posts_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "foro_posts",
+   "tipo": "f",
+   "nombre": "foro_posts_autor_id_fkey",
+   "def": "FOREIGN KEY (autor_id) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "foro_posts",
+   "tipo": "f",
+   "nombre": "foro_posts_tema_contenido_id_fkey",
+   "def": "FOREIGN KEY (tema_contenido_id) REFERENCES contenidos(id) ON DELETE SET NULL"
+  },
+  {
+   "t": "foro_posts",
+   "tipo": "c",
+   "nombre": "foro_posts_categoria_check",
+   "def": "CHECK ((categoria = ANY (ARRAY['general'::text, 'tecnologia'::text, 'internacionales'::text, 'nuevos-humanos'::text, 'educacion'::text])))"
+  },
+  {
+   "t": "foro_posts",
+   "tipo": "c",
+   "nombre": "foro_posts_enfoque_check",
+   "def": "CHECK (((enfoque IS NULL) OR (enfoque = ANY (ARRAY['puerto-rico'::text, 'estados-unidos'::text, 'hispanoamerica'::text, 'internacionales'::text]))))"
+  },
+  {
+   "t": "foro_posts",
+   "tipo": "c",
+   "nombre": "foro_posts_enlace_media_tipo_check",
+   "def": "CHECK (((enlace_media_tipo IS NULL) OR (enlace_media_tipo = ANY (ARRAY['imagen'::text, 'audio'::text, 'video'::text]))))"
+  },
+  {
+   "t": "foro_posts",
+   "tipo": "c",
+   "nombre": "foro_posts_subseccion_check",
+   "def": "CHECK (((subseccion IS NULL) OR (subseccion = ANY (ARRAY['corrupcion-humana'::text, 'ilogica-humana'::text, 'nuevos-humanos'::text, 'educacion'::text]))))"
+  },
+  {
+   "t": "gastos_servicios",
+   "tipo": "p",
+   "nombre": "gastos_servicios_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "gastos_servicios",
+   "tipo": "c",
+   "nombre": "gastos_servicios_estado_check",
+   "def": "CHECK ((estado = ANY (ARRAY['gratis'::text, 'gratis_por_ahora'::text, 'por_uso'::text])))"
+  },
+  {
+   "t": "ia_generaciones",
+   "tipo": "p",
+   "nombre": "ia_generaciones_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "ia_generaciones",
+   "tipo": "f",
+   "nombre": "ia_generaciones_creado_por_fkey",
+   "def": "FOREIGN KEY (creado_por) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "ia_generaciones",
+   "tipo": "c",
+   "nombre": "ia_generaciones_agente_check",
+   "def": "CHECK ((agente = ANY (ARRAY['investigador'::text, 'redactor'::text, 'traductor'::text, 'clasificadora'::text, 'resumidora'::text, 'correctora'::text, 'guardiana'::text, 'pintora'::text, 'grieta'::text, 'cazadora'::text, 'contrapunto'::text, 'farolera'::text, 'verificador'::text])))"
+  },
+  {
+   "t": "ia_generaciones",
+   "tipo": "c",
+   "nombre": "ia_generaciones_fuente_tipo_check",
+   "def": "CHECK ((fuente_tipo = ANY (ARRAY['url'::text, 'texto'::text, 'notas'::text])))"
+  },
+  {
+   "t": "mensajes_contacto",
+   "tipo": "p",
+   "nombre": "mensajes_contacto_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "tipo": "p",
+   "nombre": "moderacion_apelaciones_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "tipo": "f",
+   "nombre": "moderacion_apelaciones_restriccion_id_fkey",
+   "def": "FOREIGN KEY (restriccion_id) REFERENCES moderacion_restricciones(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "tipo": "f",
+   "nombre": "moderacion_apelaciones_usuario_id_fkey",
+   "def": "FOREIGN KEY (usuario_id) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "tipo": "c",
+   "nombre": "moderacion_apelaciones_estado_check",
+   "def": "CHECK ((estado = ANY (ARRAY['pendiente'::text, 'aceptada'::text, 'rechazada'::text])))"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "tipo": "c",
+   "nombre": "moderacion_apelaciones_mensaje_check",
+   "def": "CHECK ((char_length(mensaje) <= 2000))"
+  },
+  {
+   "t": "moderacion_casos",
+   "tipo": "u",
+   "nombre": "moderacion_casos_tipo_item_item_id_key",
+   "def": "UNIQUE (tipo_item, item_id)"
+  },
+  {
+   "t": "moderacion_casos",
+   "tipo": "p",
+   "nombre": "moderacion_casos_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "moderacion_casos",
+   "tipo": "f",
+   "nombre": "moderacion_casos_afectado_id_fkey",
+   "def": "FOREIGN KEY (afectado_id) REFERENCES perfiles(id) ON DELETE SET NULL"
+  },
+  {
+   "t": "moderacion_casos",
+   "tipo": "f",
+   "nombre": "moderacion_casos_autor_id_fkey",
+   "def": "FOREIGN KEY (autor_id) REFERENCES perfiles(id) ON DELETE SET NULL"
+  },
+  {
+   "t": "moderacion_casos",
+   "tipo": "c",
+   "nombre": "moderacion_casos_estado_check",
+   "def": "CHECK ((estado = ANY (ARRAY['abierto'::text, 'en_revision'::text, 'resuelto'::text])))"
+  },
+  {
+   "t": "moderacion_casos",
+   "tipo": "c",
+   "nombre": "moderacion_casos_nivel_check",
+   "def": "CHECK ((nivel = ANY (ARRAY['bajo'::text, 'elevado'::text, 'critico'::text])))"
+  },
+  {
+   "t": "moderacion_decisiones",
+   "tipo": "p",
+   "nombre": "moderacion_decisiones_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "moderacion_decisiones",
+   "tipo": "f",
+   "nombre": "moderacion_decisiones_caso_id_fkey",
+   "def": "FOREIGN KEY (caso_id) REFERENCES moderacion_casos(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "moderacion_decisiones",
+   "tipo": "c",
+   "nombre": "moderacion_decisiones_decision_check",
+   "def": "CHECK ((decision = ANY (ARRAY['mantener'::text, 'ocultar'::text, 'restaurar'::text, 'suspender_temporal'::text, 'suspender_permanente'::text, 'restringir'::text, 'levantar'::text, 'escalar'::text])))"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "tipo": "p",
+   "nombre": "moderacion_evidencias_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "tipo": "f",
+   "nombre": "moderacion_evidencias_caso_id_fkey",
+   "def": "FOREIGN KEY (caso_id) REFERENCES moderacion_casos(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "tipo": "p",
+   "nombre": "moderacion_reportes_ncmec_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "tipo": "f",
+   "nombre": "moderacion_reportes_ncmec_caso_id_fkey",
+   "def": "FOREIGN KEY (caso_id) REFERENCES moderacion_casos(id) ON DELETE SET NULL"
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "tipo": "c",
+   "nombre": "moderacion_reportes_ncmec_categoria_check",
+   "def": "CHECK ((categoria = ANY (ARRAY['csam'::text, 'trata_de_menores'::text, 'enticement'::text, 'otra'::text])))"
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "tipo": "c",
+   "nombre": "moderacion_reportes_ncmec_estado_check",
+   "def": "CHECK ((estado = ANY (ARRAY['borrador'::text, 'enviado'::text, 'confirmado'::text, 'cerrado'::text])))"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "tipo": "p",
+   "nombre": "moderacion_restricciones_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "tipo": "f",
+   "nombre": "moderacion_restricciones_caso_id_fkey",
+   "def": "FOREIGN KEY (caso_id) REFERENCES moderacion_casos(id) ON DELETE SET NULL"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "tipo": "f",
+   "nombre": "moderacion_restricciones_usuario_id_fkey",
+   "def": "FOREIGN KEY (usuario_id) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "tipo": "c",
+   "nombre": "moderacion_restricciones_tipo_check",
+   "def": "CHECK ((tipo = ANY (ARRAY['suspension'::text, 'restriccion'::text])))"
+  },
+  {
+   "t": "noticias",
+   "tipo": "p",
+   "nombre": "noticias_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "noticias",
+   "tipo": "c",
+   "nombre": "noticias_categoria_check",
+   "def": "CHECK ((categoria = ANY (ARRAY['internacionales'::text, 'crimen'::text, 'salud'::text, 'deportes'::text, 'finanzas'::text, 'tecnologia'::text, 'descubrimientos'::text, 'politica'::text, 'clima'::text, 'cultura'::text, 'ciencia'::text])))"
+  },
+  {
+   "t": "noticias",
+   "tipo": "c",
+   "nombre": "noticias_divulgacion_ia_check",
+   "def": "CHECK ((divulgacion_ia = ANY (ARRAY['no'::text, 'parcial'::text, 'generado'::text])))"
+  },
+  {
+   "t": "noticias",
+   "tipo": "c",
+   "nombre": "noticias_ia_herramientas_max",
+   "def": "CHECK ((cardinality(ia_herramientas) <= 8))"
+  },
+  {
+   "t": "noticias",
+   "tipo": "c",
+   "nombre": "noticias_idioma_original_check",
+   "def": "CHECK ((idioma_original = ANY (ARRAY['es'::text, 'en'::text])))"
+  },
+  {
+   "t": "ordenes",
+   "tipo": "p",
+   "nombre": "ordenes_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "ordenes",
+   "tipo": "f",
+   "nombre": "ordenes_usuario_id_fkey",
+   "def": "FOREIGN KEY (usuario_id) REFERENCES perfiles(id) ON DELETE SET NULL"
+  },
+  {
+   "t": "ordenes",
+   "tipo": "c",
+   "nombre": "ordenes_estado_check",
+   "def": "CHECK ((estado = ANY (ARRAY['pendiente'::text, 'pagada'::text, 'cancelada'::text])))"
+  },
+  {
+   "t": "perfiles",
+   "tipo": "p",
+   "nombre": "perfiles_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "perfiles",
+   "tipo": "f",
+   "nombre": "perfiles_id_fkey",
+   "def": "FOREIGN KEY (id) REFERENCES auth.users(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "perfiles",
+   "tipo": "c",
+   "nombre": "perfiles_agradecimiento_nombre_check",
+   "def": "CHECK (((agradecimiento_nombre IS NULL) OR ((char_length(agradecimiento_nombre) >= 2) AND (char_length(agradecimiento_nombre) <= 40))))"
+  },
+  {
+   "t": "perfiles",
+   "tipo": "c",
+   "nombre": "perfiles_rol_check",
+   "def": "CHECK ((rol = ANY (ARRAY['usuario'::text, 'admin'::text, 'premium'::text, 'moderador'::text])))"
+  },
+  {
+   "t": "productos",
+   "tipo": "p",
+   "nombre": "productos_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "reportes",
+   "tipo": "p",
+   "nombre": "reportes_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "reportes",
+   "tipo": "f",
+   "nombre": "reportes_reportado_por_fkey",
+   "def": "FOREIGN KEY (reportado_por) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "reportes",
+   "tipo": "c",
+   "nombre": "reportes_estado_check",
+   "def": "CHECK ((estado = ANY (ARRAY['pendiente'::text, 'revisado'::text, 'descartado'::text])))"
+  },
+  {
+   "t": "reportes",
+   "tipo": "c",
+   "nombre": "reportes_tipo_check",
+   "def": "CHECK ((tipo = ANY (ARRAY['debate_post'::text, 'debate_comentario'::text, 'articulo_comentario'::text])))"
+  },
+  {
+   "t": "semillas",
+   "tipo": "p",
+   "nombre": "semillas_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "semillas",
+   "tipo": "f",
+   "nombre": "semillas_autor_id_fkey",
+   "def": "FOREIGN KEY (autor_id) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "semillas",
+   "tipo": "c",
+   "nombre": "semillas_estado_check",
+   "def": "CHECK ((estado = ANY (ARRAY['semilla'::text, 'explorada'::text, 'en_desarrollo'::text, 'lista'::text, 'pasada'::text])))"
+  },
+  {
+   "t": "suscriptores",
+   "tipo": "u",
+   "nombre": "suscriptores_email_key",
+   "def": "UNIQUE (email)"
+  },
+  {
+   "t": "suscriptores",
+   "tipo": "p",
+   "nombre": "suscriptores_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "traducciones",
+   "tipo": "p",
+   "nombre": "traducciones_pkey",
+   "def": "PRIMARY KEY (tipo, item_id, idioma)"
+  },
+  {
+   "t": "traducciones",
+   "tipo": "f",
+   "nombre": "traducciones_actualizado_por_fkey",
+   "def": "FOREIGN KEY (actualizado_por) REFERENCES perfiles(id) ON DELETE SET NULL"
+  },
+  {
+   "t": "traducciones",
+   "tipo": "c",
+   "nombre": "traducciones_idioma_check",
+   "def": "CHECK ((idioma = ANY (ARRAY['es'::text, 'en'::text])))"
+  },
+  {
+   "t": "traducciones",
+   "tipo": "c",
+   "nombre": "traducciones_tipo_check",
+   "def": "CHECK ((tipo = ANY (ARRAY['noticia'::text, 'contenido'::text, 'producto'::text])))"
+  },
+  {
+   "t": "verificador_concesiones",
+   "tipo": "u",
+   "nombre": "verificador_concesiones_stripe_ref_key",
+   "def": "UNIQUE (stripe_ref)"
+  },
+  {
+   "t": "verificador_concesiones",
+   "tipo": "p",
+   "nombre": "verificador_concesiones_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "verificador_concesiones",
+   "tipo": "f",
+   "nombre": "verificador_concesiones_usuario_id_fkey",
+   "def": "FOREIGN KEY (usuario_id) REFERENCES perfiles(id) ON DELETE CASCADE"
+  },
+  {
+   "t": "verificador_concesiones",
+   "tipo": "c",
+   "nombre": "verificador_concesiones_cantidad_check",
+   "def": "CHECK ((cantidad > 0))"
+  },
+  {
+   "t": "verificador_concesiones",
+   "tipo": "c",
+   "nombre": "verificador_concesiones_check",
+   "def": "CHECK ((usados <= cantidad))"
+  },
+  {
+   "t": "verificador_concesiones",
+   "tipo": "c",
+   "nombre": "verificador_concesiones_tipo_check",
+   "def": "CHECK ((tipo = ANY (ARRAY['mensual'::text, 'unico'::text])))"
+  },
+  {
+   "t": "verificador_concesiones",
+   "tipo": "c",
+   "nombre": "verificador_concesiones_usados_check",
+   "def": "CHECK ((usados >= 0))"
+  },
+  {
+   "t": "verificador_reportes",
+   "tipo": "p",
+   "nombre": "verificador_reportes_pkey",
+   "def": "PRIMARY KEY (id)"
+  },
+  {
+   "t": "verificador_reportes",
+   "tipo": "f",
+   "nombre": "verificador_reportes_usuario_id_fkey",
+   "def": "FOREIGN KEY (usuario_id) REFERENCES perfiles(id) ON DELETE CASCADE"
+  }
+ ],
+ "indices": [
+  {
+   "t": "comentarios",
+   "nombre": "comentarios_pkey",
+   "def": "CREATE UNIQUE INDEX comentarios_pkey ON public.comentarios USING btree (id)"
+  },
+  {
+   "t": "comentarios",
+   "nombre": "idx_comentarios_item",
+   "def": "CREATE INDEX idx_comentarios_item ON public.comentarios USING btree (tipo, item_id, creado_en)"
+  },
+  {
+   "t": "contenidos",
+   "nombre": "contenidos_pkey",
+   "def": "CREATE UNIQUE INDEX contenidos_pkey ON public.contenidos USING btree (id)"
+  },
+  {
+   "t": "contenidos",
+   "nombre": "idx_contenidos_seccion",
+   "def": "CREATE INDEX idx_contenidos_seccion ON public.contenidos USING btree (seccion, categoria, fecha_publicacion DESC)"
+  },
+  {
+   "t": "contenidos",
+   "nombre": "idx_contenidos_un_destacado",
+   "def": "CREATE UNIQUE INDEX idx_contenidos_un_destacado ON public.contenidos USING btree (seccion, destacado) WHERE destacado"
+  },
+  {
+   "t": "foro_comentarios",
+   "nombre": "foro_comentarios_pkey",
+   "def": "CREATE UNIQUE INDEX foro_comentarios_pkey ON public.foro_comentarios USING btree (id)"
+  },
+  {
+   "t": "foro_comentarios",
+   "nombre": "idx_foro_comentarios_post_id",
+   "def": "CREATE INDEX idx_foro_comentarios_post_id ON public.foro_comentarios USING btree (post_id, creado_en)"
+  },
+  {
+   "t": "foro_posts",
+   "nombre": "foro_posts_pkey",
+   "def": "CREATE UNIQUE INDEX foro_posts_pkey ON public.foro_posts USING btree (id)"
+  },
+  {
+   "t": "foro_posts",
+   "nombre": "idx_foro_posts_categoria",
+   "def": "CREATE INDEX idx_foro_posts_categoria ON public.foro_posts USING btree (categoria, creado_en DESC)"
+  },
+  {
+   "t": "gastos_servicios",
+   "nombre": "gastos_servicios_pkey",
+   "def": "CREATE UNIQUE INDEX gastos_servicios_pkey ON public.gastos_servicios USING btree (id)"
+  },
+  {
+   "t": "ia_generaciones",
+   "nombre": "ia_generaciones_pkey",
+   "def": "CREATE UNIQUE INDEX ia_generaciones_pkey ON public.ia_generaciones USING btree (id)"
+  },
+  {
+   "t": "ia_generaciones",
+   "nombre": "idx_ia_generaciones_creado_en",
+   "def": "CREATE INDEX idx_ia_generaciones_creado_en ON public.ia_generaciones USING btree (creado_en DESC)"
+  },
+  {
+   "t": "mensajes_contacto",
+   "nombre": "mensajes_contacto_pkey",
+   "def": "CREATE UNIQUE INDEX mensajes_contacto_pkey ON public.mensajes_contacto USING btree (id)"
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "nombre": "moderacion_apelaciones_pkey",
+   "def": "CREATE UNIQUE INDEX moderacion_apelaciones_pkey ON public.moderacion_apelaciones USING btree (id)"
+  },
+  {
+   "t": "moderacion_casos",
+   "nombre": "idx_moderacion_casos_estado",
+   "def": "CREATE INDEX idx_moderacion_casos_estado ON public.moderacion_casos USING btree (estado, nivel, creado_en DESC)"
+  },
+  {
+   "t": "moderacion_casos",
+   "nombre": "moderacion_casos_pkey",
+   "def": "CREATE UNIQUE INDEX moderacion_casos_pkey ON public.moderacion_casos USING btree (id)"
+  },
+  {
+   "t": "moderacion_casos",
+   "nombre": "moderacion_casos_tipo_item_item_id_key",
+   "def": "CREATE UNIQUE INDEX moderacion_casos_tipo_item_item_id_key ON public.moderacion_casos USING btree (tipo_item, item_id)"
+  },
+  {
+   "t": "moderacion_decisiones",
+   "nombre": "idx_moderacion_decisiones_caso",
+   "def": "CREATE INDEX idx_moderacion_decisiones_caso ON public.moderacion_decisiones USING btree (caso_id, creado_en)"
+  },
+  {
+   "t": "moderacion_decisiones",
+   "nombre": "moderacion_decisiones_pkey",
+   "def": "CREATE UNIQUE INDEX moderacion_decisiones_pkey ON public.moderacion_decisiones USING btree (id)"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "nombre": "idx_moderacion_evidencias_caso",
+   "def": "CREATE INDEX idx_moderacion_evidencias_caso ON public.moderacion_evidencias USING btree (caso_id)"
+  },
+  {
+   "t": "moderacion_evidencias",
+   "nombre": "moderacion_evidencias_pkey",
+   "def": "CREATE UNIQUE INDEX moderacion_evidencias_pkey ON public.moderacion_evidencias USING btree (id)"
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "nombre": "idx_moderacion_reportes_ncmec_estado",
+   "def": "CREATE INDEX idx_moderacion_reportes_ncmec_estado ON public.moderacion_reportes_ncmec USING btree (estado, creado_en DESC)"
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "nombre": "moderacion_reportes_ncmec_pkey",
+   "def": "CREATE UNIQUE INDEX moderacion_reportes_ncmec_pkey ON public.moderacion_reportes_ncmec USING btree (id)"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "nombre": "idx_moderacion_restricciones_usuario",
+   "def": "CREATE INDEX idx_moderacion_restricciones_usuario ON public.moderacion_restricciones USING btree (usuario_id) WHERE activa"
+  },
+  {
+   "t": "moderacion_restricciones",
+   "nombre": "moderacion_restricciones_pkey",
+   "def": "CREATE UNIQUE INDEX moderacion_restricciones_pkey ON public.moderacion_restricciones USING btree (id)"
+  },
+  {
+   "t": "noticias",
+   "nombre": "idx_noticias_categoria",
+   "def": "CREATE INDEX idx_noticias_categoria ON public.noticias USING btree (categoria, fecha DESC)"
+  },
+  {
+   "t": "noticias",
+   "nombre": "idx_noticias_un_destacado",
+   "def": "CREATE UNIQUE INDEX idx_noticias_un_destacado ON public.noticias USING btree (destacado) WHERE destacado"
+  },
+  {
+   "t": "noticias",
+   "nombre": "noticias_pkey",
+   "def": "CREATE UNIQUE INDEX noticias_pkey ON public.noticias USING btree (id)"
+  },
+  {
+   "t": "ordenes",
+   "nombre": "idx_ordenes_stripe_session_id",
+   "def": "CREATE UNIQUE INDEX idx_ordenes_stripe_session_id ON public.ordenes USING btree (stripe_session_id) WHERE (stripe_session_id IS NOT NULL)"
+  },
+  {
+   "t": "ordenes",
+   "nombre": "ordenes_pkey",
+   "def": "CREATE UNIQUE INDEX ordenes_pkey ON public.ordenes USING btree (id)"
+  },
+  {
+   "t": "perfiles",
+   "nombre": "idx_perfiles_stripe_customer_id",
+   "def": "CREATE UNIQUE INDEX idx_perfiles_stripe_customer_id ON public.perfiles USING btree (stripe_customer_id) WHERE (stripe_customer_id IS NOT NULL)"
+  },
+  {
+   "t": "perfiles",
+   "nombre": "perfiles_pkey",
+   "def": "CREATE UNIQUE INDEX perfiles_pkey ON public.perfiles USING btree (id)"
+  },
+  {
+   "t": "productos",
+   "nombre": "productos_pkey",
+   "def": "CREATE UNIQUE INDEX productos_pkey ON public.productos USING btree (id)"
+  },
+  {
+   "t": "reportes",
+   "nombre": "idx_reportes_estado",
+   "def": "CREATE INDEX idx_reportes_estado ON public.reportes USING btree (estado, creado_en DESC)"
+  },
+  {
+   "t": "reportes",
+   "nombre": "reportes_pkey",
+   "def": "CREATE UNIQUE INDEX reportes_pkey ON public.reportes USING btree (id)"
+  },
+  {
+   "t": "reportes",
+   "nombre": "uq_reportes_automatico_pendiente",
+   "def": "CREATE UNIQUE INDEX uq_reportes_automatico_pendiente ON public.reportes USING btree (tipo, item_id) WHERE ((estado = 'pendiente'::text) AND automatico)"
+  },
+  {
+   "t": "reportes",
+   "nombre": "uq_reportes_pendiente_por_persona",
+   "def": "CREATE UNIQUE INDEX uq_reportes_pendiente_por_persona ON public.reportes USING btree (tipo, item_id, reportado_por) WHERE ((estado = 'pendiente'::text) AND (reportado_por IS NOT NULL))"
+  },
+  {
+   "t": "semillas",
+   "nombre": "idx_semillas_autor",
+   "def": "CREATE INDEX idx_semillas_autor ON public.semillas USING btree (autor_id, actualizado_en DESC)"
+  },
+  {
+   "t": "semillas",
+   "nombre": "semillas_pkey",
+   "def": "CREATE UNIQUE INDEX semillas_pkey ON public.semillas USING btree (id)"
+  },
+  {
+   "t": "suscriptores",
+   "nombre": "suscriptores_email_key",
+   "def": "CREATE UNIQUE INDEX suscriptores_email_key ON public.suscriptores USING btree (email)"
+  },
+  {
+   "t": "suscriptores",
+   "nombre": "suscriptores_pkey",
+   "def": "CREATE UNIQUE INDEX suscriptores_pkey ON public.suscriptores USING btree (id)"
+  },
+  {
+   "t": "traducciones",
+   "nombre": "traducciones_pkey",
+   "def": "CREATE UNIQUE INDEX traducciones_pkey ON public.traducciones USING btree (tipo, item_id, idioma)"
+  },
+  {
+   "t": "verificador_concesiones",
+   "nombre": "idx_verificador_concesiones_usuario",
+   "def": "CREATE INDEX idx_verificador_concesiones_usuario ON public.verificador_concesiones USING btree (usuario_id, otorgado_en)"
+  },
+  {
+   "t": "verificador_concesiones",
+   "nombre": "verificador_concesiones_pkey",
+   "def": "CREATE UNIQUE INDEX verificador_concesiones_pkey ON public.verificador_concesiones USING btree (id)"
+  },
+  {
+   "t": "verificador_concesiones",
+   "nombre": "verificador_concesiones_stripe_ref_key",
+   "def": "CREATE UNIQUE INDEX verificador_concesiones_stripe_ref_key ON public.verificador_concesiones USING btree (stripe_ref)"
+  },
+  {
+   "t": "verificador_reportes",
+   "nombre": "idx_verificador_reportes_usuario",
+   "def": "CREATE INDEX idx_verificador_reportes_usuario ON public.verificador_reportes USING btree (usuario_id, creado_en DESC)"
+  },
+  {
+   "t": "verificador_reportes",
+   "nombre": "verificador_reportes_pkey",
+   "def": "CREATE UNIQUE INDEX verificador_reportes_pkey ON public.verificador_reportes USING btree (id)"
+  }
+ ],
+ "rls": [
+  {
+   "t": "comentarios",
+   "rls": true
+  },
+  {
+   "t": "contenidos",
+   "rls": true
+  },
+  {
+   "t": "foro_comentarios",
+   "rls": true
+  },
+  {
+   "t": "foro_posts",
+   "rls": true
+  },
+  {
+   "t": "gastos_servicios",
+   "rls": true
+  },
+  {
+   "t": "ia_generaciones",
+   "rls": true
+  },
+  {
+   "t": "mensajes_contacto",
+   "rls": true
+  },
+  {
+   "t": "moderacion_apelaciones",
+   "rls": true
+  },
+  {
+   "t": "moderacion_casos",
+   "rls": true
+  },
+  {
+   "t": "moderacion_decisiones",
+   "rls": true
+  },
+  {
+   "t": "moderacion_evidencias",
+   "rls": true
+  },
+  {
+   "t": "moderacion_reportes_ncmec",
+   "rls": true
+  },
+  {
+   "t": "moderacion_restricciones",
+   "rls": true
+  },
+  {
+   "t": "noticias",
+   "rls": true
+  },
+  {
+   "t": "ordenes",
+   "rls": true
+  },
+  {
+   "t": "perfiles",
+   "rls": true
+  },
+  {
+   "t": "productos",
+   "rls": true
+  },
+  {
+   "t": "reportes",
+   "rls": true
+  },
+  {
+   "t": "semillas",
+   "rls": true
+  },
+  {
+   "t": "suscriptores",
+   "rls": true
+  },
+  {
+   "t": "traducciones",
+   "rls": true
+  },
+  {
+   "t": "verificador_concesiones",
+   "rls": true
+  },
+  {
+   "t": "verificador_reportes",
+   "rls": true
+  }
+ ]
+}

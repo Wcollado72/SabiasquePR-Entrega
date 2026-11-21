@@ -1,0 +1,102 @@
+[build]
+  # El sitio vive en la carpeta frontend/ (estructura pedida por la rubrica: /frontend + /backend). Netlify construye y
+  # publica SOLO esa carpeta: backend/, docs/ y tools/ ya no forman parte de lo que se sirve.
+  base = "frontend"
+  command = "node build.js"
+  publish = "."
+  # Cada deploy a produccion cuesta 15 creditos de Netlify. Si el commit no toca nada de frontend/, Netlify se salta el
+  # build. Codigo 0 = saltar; cualquier otro (incluye error) = construir, asi que ante la duda se publica.
+  # (El comando corre dentro de la carpeta base, por eso el "." es frontend/ y "../netlify.toml" es este archivo:
+  # un cambio en la configuracion, como las reglas de redireccion, tambien debe publicarse.)
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- . ../netlify.toml"
+
+# Vistas previas de PR (2026-10-23): cada una es otro build de 15 creditos, y ademas no pueden hablar con la API (CORS solo
+# deja entrar a sabiasquepr.com), asi que solo sirven para revisar el aspecto. Ahora se construyen SOLO si la rama se llama
+# "preview/algo"; en cualquier otra rama se saltan. Codigo 1 = construir, 0 = saltar.
+[context.deploy-preview]
+  ignore = 'case "$HEAD" in preview/*) exit 1 ;; *) exit 0 ;; esac'
+
+# Quien entre por la direccion de Netlify (fabulous-tartufo-fcb839.netlify.app) pasa a
+# sabiasquepr.com. Motivo (2026-10-04): Stripe devolvia a los compradores a la direccion de
+# Netlify, donde no tenian sesion iniciada (cada dominio guarda su propia sesion) y parecia que
+# la sesion se habia caido; ademas evita contenido duplicado ante Google. Solo aplica a ESE
+# nombre exacto: los deploy previews y branch deploys (deploy-preview-N--..., main--...) son
+# otros nombres y no se tocan. Va primero porque Netlify usa la primera regla que coincide.
+[[redirects]]
+  from = "https://fabulous-tartufo-fcb839.netlify.app/*"
+  to = "https://sabiasquepr.com/:splat"
+  status = 301
+  force = true
+
+# (Ya no hace falta bloquear /backend, /docs ni /tools: al publicar solo frontend/, esas carpetas no existen en el sitio.)
+
+# Dentro de frontend/ conviven el sitio y sus herramientas de construccion. Estos archivos NO son parte del sitio
+# (generador, notas internas de revision legal, datos de origen del RSS...): se devuelven como 404.
+[[redirects]]
+  from = "/build.js"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package.json"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/_content/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/i18n/revisar-legal.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# RSS dinamico (2026-11-16): /rss.xml se arma al momento en el servidor con lo publicado en Contenidos (antes era un archivo fijo
+# con 2 noticias viejas). Netlify lo pide al backend y lo sirve con la misma direccion de siempre.
+[[redirects]]
+  from = "/rss.xml"
+  to = "https://sabiasquepr-backend-uufz.onrender.com/rss.xml"
+  status = 200
+  force = true
+
+# El manifiesto se movio de su propia pagina a una seccion dentro de
+# Contacto -- 301 real (no rewrite) porque la URL visible SI cambia.
+[[redirects]]
+  from = "/manifiesto.html"
+  to = "/contacto.html#manifiesto"
+  status = 301
+  force = true
+
+# El Foro general se retiro como pagina propia -- su motor CRUD+JWT ahora
+# vive dentro del debate semanal de Corrupcion Humana en Revolucion Humana.
+[[redirects]]
+  from = "/foro.html"
+  to = "/revolucion-humana.html"
+  status = 301
+  force = true
+
+# La pagina se renombro de nuevos-humanos.html a revolucion-humana.html
+# (el nombre "Nuevos Humanos" se libero para usarlo como sub-seccion).
+[[redirects]]
+  from = "/nuevos-humanos.html"
+  to = "/revolucion-humana.html"
+  status = 301
+  force = true
+
+# Cabeceras de seguridad (CSP, HSTS, X-Frame-Options, etc.): YA NO viven aqui.
+# Se generan en cada build en el archivo `_headers` (ver generarHeaders() en
+# build.js, donde esta documentado cada dominio permitido) porque el CSP lleva
+# el hash SHA-256 de cada script en linea y ese hash cambia cuando cambia el
+# script. Netlify lee `_headers` de la carpeta publicada. AUDITORIA-SEGURIDAD.md,
+# debilidades #3 y #13.

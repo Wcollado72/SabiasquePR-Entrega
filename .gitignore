@@ -1,0 +1,38 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno / secretos
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+*.log
+
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build / cache
+dist/
+build/
+.cache/
+coverage/
+
+# Claude Code — configuración local de la máquina
+.claude/settings.local.json
+
+# Skills de referencia instaladas para el asistente (no son parte del sitio)
+.agents/
+.claude/skills/
+.junie/
+skills-lock.json
+
+# Generado por frontend/scripts/i18n-extraer.js (lista de trabajo, no se publica)
+frontend/i18n/faltantes.json
+
+# Documentos personales y legales sensibles (solo locales, nunca se suben)
+docs/privado/

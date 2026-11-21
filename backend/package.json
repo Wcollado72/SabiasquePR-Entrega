@@ -1,0 +1,52 @@
+{
+  "name": "sabiasquepr-backend",
+  "version": "0.1.0",
+  "description": "API backend de Sabias que PR",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.18"
+  },
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:schema": "node scripts/apply-schema.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "db:probar-schema": "node scripts/probar-schema.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js",
+      "!src/scripts/**"
+    ],
+    "coverageReporters": [
+      "text",
+      "text-summary",
+      "html"
+    ]
+  },
+  "dependencies": {
+    "@mozilla/readability": "^0.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "jose": "^5.9.6",
+    "jsdom": "^30.1.3",
+    "pg": "^8.12.0",
+    "stripe": "^22.6.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "globals": "^17.13.0",
+    "jest": "^30.5.0",
+    "supertest": "^7.2.2"
+  }
+}
